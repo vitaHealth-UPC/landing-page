@@ -92,11 +92,15 @@
         <article class="floating-card family-card" data-node-id="405:48">
           <strong data-i18n="hero.family.title">Tu familia lo ve ↑</strong>
           <div class="family-member">
-            <img src="assets/images/avatar-maria.png" alt="" aria-hidden="true">
+            <span class="family-avatar family-avatar-maria" aria-hidden="true">
+              <img src="assets/icons/step-account.png" alt="">
+            </span>
             <p><b>María</b><em data-i18n="hero.family.confirmed">Confirmado ✓</em><span>Hoy, 8:02 a. m.</span></p>
           </div>
           <div class="family-member">
-            <img src="assets/images/avatar-carlos.png" alt="" aria-hidden="true">
+            <span class="family-avatar family-avatar-carlos" aria-hidden="true">
+              <img src="assets/icons/step-account.png" alt="">
+            </span>
             <p><b>Carlos</b><em data-i18n="hero.family.confirmed">Confirmado ✓</em><span>Hoy, 9:02 a. m.</span></p>
           </div>
         </article>
@@ -258,8 +262,8 @@
           src="assets/images/app-phone-medications-en.png"
           data-src-en="assets/images/app-phone-medications-en.png"
           data-src-es="assets/images/app-phone-medications.png"
-          data-src-mobile-en="assets/images/app-phone-medications-mobile-en.png"
-          data-src-mobile-es="assets/images/app-phone-medications-mobile-es.png"
+          data-src-mobile-en="assets/images/app-phone-medications-en.png"
+          data-src-mobile-es="assets/images/app-phone-medications.png"
           alt="Medication screen in Tata">
         <img class="app-phone app-phone-home"
           src="assets/images/app-phone-home-en.png"
@@ -272,15 +276,19 @@
           src="assets/images/app-phone-family-en.png"
           data-src-en="assets/images/app-phone-family-en.png"
           data-src-es="assets/images/app-phone-family.png"
-          data-src-mobile-en="assets/images/app-phone-family-mobile-en.png"
-          data-src-mobile-es="assets/images/app-phone-family-mobile-es.png"
+          data-src-mobile-en="assets/images/app-phone-family-en.png"
+          data-src-mobile-es="assets/images/app-phone-family.png"
           alt="Tata family summary">
         <div class="app-desktop-badge" aria-hidden="true">
           <strong data-i18n="app.badge.title">Diseñada para acompañarte</strong>
           <span data-i18n="app.badge.body">Simple, accesible y familiar.</span>
         </div>
-        <img class="app-mobile-pointer app-mobile-pointer-left" src="assets/icons/app-mobile-pointer-left.png" alt="" aria-hidden="true">
-        <img class="app-mobile-pointer app-mobile-pointer-right" src="assets/icons/app-mobile-pointer-right.png" alt="" aria-hidden="true">
+        <button class="app-mobile-pointer app-mobile-pointer-left" type="button" data-app-carousel="prev" aria-label="Previous app screen">
+          <img src="assets/icons/app-mobile-pointer-left.png" alt="" aria-hidden="true">
+        </button>
+        <button class="app-mobile-pointer app-mobile-pointer-right" type="button" data-app-carousel="next" aria-label="Next app screen">
+          <img src="assets/icons/app-mobile-pointer-right.png" alt="" aria-hidden="true">
+        </button>
         <div class="app-mobile-badge">
           <strong data-i18n="app.mobile.badge.title">Tata on your phone</strong>
           <span data-i18n="app.mobile.badge.body">Clear, simple and always close.</span>
