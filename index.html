@@ -7,54 +7,98 @@
   <meta name="keywords" content="Tata, medication reminders, adherence, caregiver, family health">
   <meta name="author" content="VitaHealth UPC">
   <title>Tata | Medication care made simpler</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Dancing+Script:wght@700&family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#home" aria-label="Tata home">Tata</a>
+  <header class="site-header" data-node-id="405:5">
+    <div class="header-shell">
+      <a class="brand" href="#home" aria-label="Tata home">
+        <img src="assets/logo/tata-wordmark.png" alt="Tata">
+      </a>
 
       <nav class="main-nav" aria-label="Main navigation">
-        <a href="#about" data-i18n="nav.about">What is Tata</a>
-        <a href="#how-it-works" data-i18n="nav.how">How it works</a>
-        <a href="#plans" data-i18n="nav.plans">Plans</a>
-        <a href="#testimonials" data-i18n="nav.testimonials">Testimonials</a>
-        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+        <a href="#about" data-i18n="nav.about">Qué es Tata</a>
+        <a href="#how-it-works" data-i18n="nav.how">Cómo funciona</a>
+        <a href="#plans" data-i18n="nav.plans">Planes</a>
+        <a href="#testimonials" data-i18n="nav.testimonials">Testimonios</a>
+        <a href="#faq" data-i18n="nav.faq">Preguntas frecuentes</a>
       </nav>
 
       <div class="header-actions">
         <button class="language-toggle" type="button" data-language-toggle aria-label="Change language">
-          ES
+          <img src="assets/icons/globe.png" alt="" aria-hidden="true">
+          <span class="language-code">ES</span>
         </button>
-        <a class="button button-secondary" href="#login" data-i18n="actions.login">Log in</a>
-        <a class="button button-primary" href="#plans" data-i18n="actions.start">Get started</a>
+        <a class="button button-login" href="#login" data-i18n="actions.login">Iniciar sesión</a>
+        <a class="button button-start" href="#plans" data-i18n="actions.start">Comenzar</a>
       </div>
     </div>
   </header>
 
   <main id="main-content">
-    <section id="home" class="hero section">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow" data-i18n="hero.eyebrow">Medication care for everyday life</p>
-          <h1 data-i18n="hero.title">Care for your medications without making life complicated.</h1>
-          <p class="hero-description" data-i18n="hero.description">
-            Friendly reminders, simple confirmations and family follow-up in one place.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#plans" data-i18n="actions.start">Get started</a>
-            <a class="button button-secondary" href="#how-it-works" data-i18n="actions.learn">Learn more</a>
-          </div>
+    <section id="home" class="hero" data-node-id="405:21">
+      <img class="hero-background" src="assets/images/hero-background.png" alt="" aria-hidden="true">
+
+      <div class="hero-copy" data-node-id="405:22">
+        <p class="hero-pill" data-i18n="hero.eyebrow">TRANQUILIDAD PARA TODA LA FAMILIA</p>
+        <h1 data-i18n="hero.title">Cuidar los medicamentos sin complicarte</h1>
+        <p class="hero-description" data-i18n="hero.description">
+          Tata te ayuda a recordar tus medicamentos, confirmarlos de forma simple y mantener a tu familia siempre informada. Más tranquilidad, más bienestar, todos los días.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-start hero-primary" href="#plans">
+            <span data-i18n="actions.startNow">Comenzar ahora</span>
+            <img src="assets/icons/arrow-right.png" alt="" aria-hidden="true">
+          </a>
+          <a class="button hero-secondary" href="#how-it-works" data-i18n="actions.how">Conocer cómo funciona</a>
         </div>
 
-        <div class="hero-visual" aria-label="Tata app preview">
-          <div class="placeholder-card" role="img" aria-label="Application preview placeholder">
-            App preview
-          </div>
+        <div class="trust-row" aria-label="Benefits">
+          <span><img src="assets/icons/trust-easy.png" alt="" aria-hidden="true"><span data-i18n="hero.trust.easy">Fácil de usar</span></span>
+          <span><img src="assets/icons/trust-card.png" alt="" aria-hidden="true"><span data-i18n="hero.trust.card">Sin tarjeta de crédito</span></span>
+          <span><img src="assets/icons/trust-cancel.png" alt="" aria-hidden="true"><span data-i18n="hero.trust.cancel">Cancela cuando quieras</span></span>
         </div>
+      </div>
+
+      <div class="hero-visual" data-node-id="405:36" aria-label="Vista previa de Tata">
+        <article class="floating-card medication-card" data-node-id="405:40">
+          <div class="medication-symbol"><img src="assets/icons/medication.png" alt="" aria-hidden="true"></div>
+          <div class="medication-card-copy">
+            <strong data-i18n="hero.card.time">Hoy, 9:00 a. m.</strong>
+            <span data-i18n="hero.card.medication">Tomar Amlodipino<br>1 tableta (5 mg)</span>
+          </div>
+          <button type="button" class="mini-confirm" data-i18n="hero.card.confirm">✓ Confirmar</button>
+        </article>
+
+        <article class="floating-card confirmed-card" data-node-id="405:44">
+          <img src="assets/icons/confirmation-check.png" alt="" aria-hidden="true">
+          <div>
+            <strong data-i18n="hero.done.title">¡Listo!</strong>
+            <span data-i18n="hero.done.text">Medicamento confirmado<br>9:02 a. m.</span>
+          </div>
+        </article>
+
+        <article class="floating-card family-card" data-node-id="405:48">
+          <strong data-i18n="hero.family.title">Tu familia lo ve ↑</strong>
+          <div class="family-member">
+            <img src="assets/images/avatar-maria.png" alt="" aria-hidden="true">
+            <p><b>María</b><em data-i18n="hero.family.confirmed">Confirmado ✓</em><span>Hoy, 8:02 a. m.</span></p>
+          </div>
+          <div class="family-member">
+            <img src="assets/images/avatar-carlos.png" alt="" aria-hidden="true">
+            <p><b>Carlos</b><em data-i18n="hero.family.confirmed">Confirmado ✓</em><span>Hoy, 9:02 a. m.</span></p>
+          </div>
+        </article>
+
+        <p class="hero-handwritten" data-i18n="hero.handwritten">Pequeñas acciones,<br>gran tranquilidad</p>
+        <img class="hero-arrow-heart" src="assets/icons/hero-arrow-heart.png" alt="" aria-hidden="true">
       </div>
     </section>
 
