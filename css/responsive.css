@@ -1039,10 +1039,13 @@
     height: 40px;
     padding: 0;
     border: 0;
-    background: transparent;
-    color: #1b3a75;
-    font-size: 25px;
-    line-height: 1;
+    border-radius: 20px;
+    background: #f0ebff;
+    color: #6c63d9;
+    font-family: "Inter", sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 38px;
     cursor: pointer;
   }
 
@@ -1169,6 +1172,10 @@
   .trust-row img {
     width: 14px;
     height: 14px;
+  }
+
+  html[lang="en"] .trust-row {
+    width: 232px;
   }
 
   .hero-visual {
@@ -1594,7 +1601,7 @@
   }
 
   .app-phone-medications {
-    left: -95px;
+    left: -128px;
     top: 501px;
     width: 201px;
     height: 393px;
@@ -1612,6 +1619,25 @@
     top: 517px;
     width: 201px;
     height: 393px;
+  }
+
+  .app-mobile-pointer {
+    position: absolute;
+    display: block;
+    width: 31px;
+    height: 38px;
+    object-fit: contain;
+    z-index: 4;
+  }
+
+  .app-mobile-pointer-left {
+    left: 68px;
+    top: 694px;
+  }
+
+  .app-mobile-pointer-right {
+    left: 302px;
+    top: 694px;
   }
 
   .app-mobile-badge {
@@ -2314,24 +2340,20 @@
   }
 
   .footer-legal {
+    display: none;
+  }
+
+  .footer-legal-mobile {
     position: absolute;
     left: 20px;
-    top: 73px;
+    top: 82px;
     width: 353px;
-    height: 32px;
+    margin: 0;
     display: block;
+    color: #44506f;
+    font-family: "Plus Jakarta Sans", sans-serif;
     font-size: 8px;
+    line-height: normal;
     text-align: center;
-  }
-
-  .footer-legal p {
-    position: static;
-    margin: 8px 0 0;
-  }
-
-  .footer-legal p:last-child {
-    display: inline-flex;
-    gap: 8px;
-    margin-top: 2px;
   }
 }
