@@ -339,6 +339,21 @@ function isMobileLayout() {
   return window.matchMedia("(max-width: 430px)").matches;
 }
 
+function updateLocalizedEmail(locale) {
+  const suffix = locale === "es_419" ? "Es" : "En";
+
+  document.querySelectorAll("[data-email-en][data-email-es]").forEach((link) => {
+    const email = link.dataset[`email${suffix}`];
+
+    if (!email) return;
+
+    link.href = `mailto:${email}`;
+    if (!link.classList.contains("support-contact")) {
+      link.textContent = email;
+    }
+  });
+}
+
 function updateLocalizedAssets(locale) {
   const suffix = locale === "es_419" ? "Es" : "En";
   const mobile = isMobileLayout();
@@ -377,6 +392,7 @@ function applyLocale(locale) {
   });
 
   updateLocalizedAssets(locale);
+  updateLocalizedEmail(locale);
 
   const toggle = document.querySelector("[data-language-toggle]");
   const code = toggle?.querySelector(".language-code");
