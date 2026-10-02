@@ -368,7 +368,7 @@ function applyLocale(locale) {
 
     const value = dictionary[key];
 
-    if (["hero.card.medication", "hero.done.text", "hero.handwritten", "features.insights.note"].includes(key)) {
+    if (value.includes("\n")) {
       element.innerHTML = value.replace(/\n/g, "<br>");
       return;
     }
