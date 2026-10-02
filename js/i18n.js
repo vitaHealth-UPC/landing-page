@@ -35,6 +35,30 @@ const translations = {
     "about.family.text": "Follow-up and alerts for caregivers and relatives.",
     "about.insights.title": "Insights",
     "about.insights.text": "Patterns and recommendations from adherence history.",
+    "value.easy.title": "Easy to use",
+    "value.easy.text": "Designed especially for older adults.",
+    "value.family.title": "Made for families",
+    "value.family.text": "Keep your loved ones informed.",
+    "value.confirm.title": "Simple confirmations",
+    "value.confirm.text": "With a single tap.",
+    "value.safe.title": "Safe and private",
+    "value.safe.text": "Your information stays protected.",
+
+    "features.kicker": "EVERYTHING YOU NEED",
+    "features.title": "A simpler, calmer way to care for your health",
+    "features.description": "Tata combines reminders, family support and recommendations so you never forget a medication.",
+    "features.reminders.title": "Medication reminders",
+    "features.reminders.text": "Receive clear, friendly alerts at the right time.",
+    "features.reminders.med": "Take Amlodipine",
+    "features.family.title": "Family follow-up",
+    "features.family.text": "Share your medication plan with your family so they can see your confirmations in real time.",
+    "features.family.chip1": "Your family",
+    "features.family.chip2": "always close",
+    "features.insights.title": "Insights/recommendations",
+    "features.insights.text": "See your adherence level and receive suggestions to take better care of your health.",
+    "features.insights.month": "Your adherence this month",
+    "features.insights.note": "Small\nsteps,\nbig\nresults",
+
     "how.title": "How Tata works",
     "how.step1.title": "Set up your medications",
     "how.step2.title": "Receive reminders",
@@ -87,6 +111,30 @@ const translations = {
     "about.family.text": "Seguimiento y alertas para familiares y cuidadores.",
     "about.insights.title": "Insights",
     "about.insights.text": "Patrones y recomendaciones a partir del historial de adherencia.",
+    "value.easy.title": "Fácil de usar",
+    "value.easy.text": "Diseñado especialmente para personas mayores.",
+    "value.family.title": "Pensado para la familia",
+    "value.family.text": "Mantén a tus seres queridos siempre informados.",
+    "value.confirm.title": "Confirmaciones simples",
+    "value.confirm.text": "Con un solo toque.",
+    "value.safe.title": "Seguro y privado",
+    "value.safe.text": "Tu información siempre protegida.",
+
+    "features.kicker": "TODO LO QUE NECESITAS",
+    "features.title": "Una manera más simple y tranquila de cuidar tu salud",
+    "features.description": "Tata combina recordatorios, acompañamiento familiar y recomendaciones para que nunca olvides un medicamento.",
+    "features.reminders.title": "Recordatorios de medicamentos",
+    "features.reminders.text": "Recibe alertas claras y amables en el momento indicado.",
+    "features.reminders.med": "Tomar Amlodipino",
+    "features.family.title": "Seguimiento familiar",
+    "features.family.text": "Comparte tu plan de medicamentos con tu familia, que podrá ver tus confirmaciones en tiempo real.",
+    "features.family.chip1": "Tu familia",
+    "features.family.chip2": "siempre cerca",
+    "features.insights.title": "Insights/recomendaciones",
+    "features.insights.text": "Conoce tu nivel de adherencia y recibe sugerencias para cuidar mejor tu salud.",
+    "features.insights.month": "Tu adherencia este mes",
+    "features.insights.note": "Pequeños\navances,\ngrandes\nresultados",
+
     "how.title": "Cómo funciona Tata",
     "how.step1.title": "Configura tus medicamentos",
     "how.step2.title": "Recibe recordatorios",
@@ -118,7 +166,7 @@ function applyLocale(locale) {
 
     const value = dictionary[key];
 
-    if (key === "hero.card.medication" || key === "hero.done.text" || key === "hero.handwritten") {
+    if (["hero.card.medication", "hero.done.text", "hero.handwritten", "features.insights.note"].includes(key)) {
       element.innerHTML = value.replace(/\n/g, "<br>");
       return;
     }

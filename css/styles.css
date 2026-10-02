@@ -700,3 +700,436 @@ body {
   height: 66px;
   object-fit: contain;
 }
+
+
+/* Figma 405:52 — Value strip */
+.value-strip {
+  height: 124px;
+  background: #fff7eb;
+  display: flex;
+  align-items: center;
+}
+
+.value-strip-inner {
+  width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 270px 1px 270px 1px 270px 1px 270px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.value-item {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.value-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #fff;
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+}
+
+.value-icon img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  display: block;
+}
+
+.value-item h2 {
+  width: 200px;
+  margin: 0 0 2px;
+  color: #1b3a75;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.32;
+  letter-spacing: 0;
+}
+
+.value-item p {
+  width: 200px;
+  margin: 0;
+  color: #0e1729;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.32;
+}
+
+.value-divider {
+  width: 1px;
+  height: 50px;
+  background: #e0e3ec;
+}
+
+/* Figma 405:80 — Features */
+.features-section {
+  position: relative;
+  min-height: 584px;
+  padding: 50px 68px 57px;
+  background: #fff;
+}
+
+.features-heading {
+  width: min(900px, calc(100% - 40px));
+  margin: 0 auto;
+  text-align: center;
+}
+
+.features-kicker {
+  margin: 0 0 6px;
+  color: #695aec;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.32;
+}
+
+.features-heading h2 {
+  margin: 0;
+  color: #1b3a75;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.32;
+  letter-spacing: 0;
+}
+
+.features-heading > p:last-child {
+  width: min(820px, 100%);
+  margin: 6px auto 0;
+  color: #606e87;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.32;
+}
+
+.feature-cards {
+  width: min(1304px, 100%);
+  margin: 32px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 420px));
+  justify-content: center;
+  gap: 22px;
+  background: #fcfcfc;
+}
+
+.tata-feature-card {
+  position: relative;
+  height: 300px;
+  border: 1px solid #e0dbff;
+  border-radius: 12px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.feature-card-copy {
+  position: absolute;
+  left: 23px;
+  right: 23px;
+  top: 21px;
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.feature-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #f2edff;
+  display: grid;
+  place-items: center;
+}
+
+.feature-icon img {
+  width: 28px;
+  height: 28px;
+  display: block;
+  object-fit: contain;
+}
+
+.feature-card-copy h3 {
+  margin: 0;
+  color: #1b3a75;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 26px;
+}
+
+.feature-card-copy p {
+  margin: 3px 0 0;
+  color: #0e1729;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+/* Reminder card */
+.reminder-mini-ui {
+  position: absolute;
+  left: 31px;
+  top: 134px;
+  width: 344px;
+  height: 140px;
+  transform: rotate(-2.46deg);
+  transform-origin: center;
+}
+
+.reminder-warm-strip {
+  position: absolute;
+  left: 37px;
+  top: 6px;
+  width: 274px;
+  height: 112px;
+  border-radius: 10px;
+  object-fit: cover;
+  filter: blur(1.15px);
+  opacity: .79;
+}
+
+.reminder-card {
+  position: absolute;
+  left: 66px;
+  top: 22px;
+  width: 220px;
+  height: 76px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(28, 41, 77, .06);
+}
+
+.reminder-bell {
+  position: absolute;
+  left: 12px;
+  top: 18px;
+  width: 42px;
+  height: 42px;
+}
+
+.reminder-bell-bg {
+  width: 42px;
+  height: 42px;
+  display: block;
+}
+
+.reminder-bell-inner {
+  position: absolute;
+  left: 9px;
+  top: 9px;
+  width: 24px;
+  height: 24px;
+}
+
+.reminder-copy {
+  position: absolute;
+  left: 66px;
+  top: 10px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Inter", sans-serif;
+}
+
+.reminder-copy strong,
+.reminder-copy b {
+  color: #1b3a75;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 600;
+}
+
+.reminder-copy span {
+  color: #606e87;
+  font-size: 10px;
+  line-height: 16px;
+}
+
+/* Family card */
+.family-feature .feature-card-copy p {
+  max-width: 292px;
+}
+
+.family-mini-ui {
+  position: absolute;
+  left: 23px;
+  top: 147px;
+  width: 350px;
+  height: 126px;
+}
+
+.family-avatars {
+  position: absolute;
+  left: 31px;
+  top: 53px;
+  width: 148px;
+  height: 58px;
+}
+
+.family-avatars img {
+  position: absolute;
+  width: 54px;
+  height: 53px;
+  object-fit: contain;
+}
+
+.family-avatars img:nth-child(1) { left: 0; top: 4px; }
+.family-avatars img:nth-child(2) { left: 46px; top: 0; width: 55px; }
+.family-avatars img:nth-child(3) { left: 90px; top: 4px; }
+
+.family-chip {
+  position: absolute;
+  left: 182px;
+  top: 14px;
+  width: 168px;
+  height: 62px;
+  border-radius: 14px;
+  background: #f2eeff;
+  transform: rotate(1.62deg);
+  font-family: "Inter", sans-serif;
+  color: #5d4fe2;
+}
+
+.family-chip strong,
+.family-chip span {
+  position: absolute;
+  left: 19px;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 600;
+}
+
+.family-chip strong { top: 11px; }
+.family-chip span { top: 33px; }
+
+.family-heart {
+  position: absolute;
+  right: 15px;
+  top: 14px;
+  width: 18px;
+  height: 18px;
+}
+
+.family-pointer {
+  position: absolute;
+  left: 8px;
+  bottom: -11px;
+  width: 16px;
+  height: 16px;
+}
+
+/* Insight card */
+.insight-feature .feature-card-copy {
+  right: 18px;
+}
+
+.insight-feature .feature-card-copy p {
+  max-width: 264px;
+}
+
+.insight-mini-ui {
+  position: absolute;
+  left: 23px;
+  top: 147px;
+  width: 260px;
+  height: 122px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(28, 41, 77, .15);
+  font-family: "Inter", sans-serif;
+}
+
+.insight-mini-ui > strong {
+  position: absolute;
+  left: 16px;
+  top: 12px;
+  color: #1b3a75;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 600;
+}
+
+.insight-percent {
+  position: absolute;
+  left: 16px;
+  top: 40px;
+  color: #41a56e;
+  font-size: 28px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
+.progress-track {
+  position: absolute;
+  left: 16px;
+  top: 84px;
+  width: 190px;
+  height: 9px;
+  border-radius: 5px;
+  background: #e5edeb;
+  overflow: hidden;
+}
+
+.progress-track span {
+  display: block;
+  width: 182px;
+  height: 9px;
+  border-radius: 5px;
+  background: #41a56e;
+}
+
+.insight-bars {
+  position: absolute;
+  right: 19px;
+  bottom: 29px;
+  height: 48px;
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+.insight-bars i {
+  display: block;
+  width: 7px;
+  border-radius: 2px;
+  background: #41a56e;
+}
+
+.insight-bars i:nth-child(1) { height: 28px; }
+.insight-bars i:nth-child(2) { height: 38px; }
+.insight-bars i:nth-child(3) { height: 48px; }
+
+.insight-note {
+  position: absolute;
+  left: 304px;
+  top: 153px;
+  width: 92px;
+  margin: 0;
+  transform: rotate(4deg);
+  color: #1b3a75;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.15;
+  text-align: center;
+}
+
+.insight-arrow {
+  position: absolute;
+  left: 296px;
+  top: 231px;
+  width: 48px;
+  height: 39px;
+  object-fit: contain;
+}
