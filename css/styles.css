@@ -2565,3 +2565,51 @@ body {
     image-rendering: auto;
   }
 }
+
+
+/* Final visual fidelity pass — 2026-10-02 */
+.family-avatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.family-avatar-maria { background: #f4ddcb; }
+.family-avatar-carlos { background: #d8ece7; }
+.family-avatar img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  opacity: .72;
+}
+.pricing-family .pricing-plan-icon > span {
+  left: 8px;
+  top: 8px;
+  display: grid;
+  place-items: center;
+}
+.pricing-family-icon {
+  display: block;
+  margin: 0 auto;
+}
+.reminder-warm-strip {
+  left: 30px;
+  top: 0;
+  width: 283px;
+  height: 128px;
+  object-fit: contain;
+  filter: none;
+  opacity: 1;
+}
+.cta-plant {
+  -webkit-mask-image: radial-gradient(ellipse at center, #000 64%, rgba(0,0,0,.9) 76%, transparent 100%);
+  mask-image: radial-gradient(ellipse at center, #000 64%, rgba(0,0,0,.9) 76%, transparent 100%);
+}
+.cta-copy h2 {
+  line-height: 1.2;
+}
+.cta-copy > p:last-child {
+  margin-top: 2px;
+}
