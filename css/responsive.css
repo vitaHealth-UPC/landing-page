@@ -2481,3 +2481,30 @@
     max-width: none;
   }
 }
+
+
+/* Hero final-crop fidelity — 2026-10-02 */
+/* hero-background.png is already the final 1440×560 Figma crop. Do not apply
+   the raw-image fill transform a second time. On wide desktop, keep the
+   overlay canvas attached to the right edge so the handwritten note and
+   floating cards stay registered with the portrait instead of drifting over
+   the subject as the viewport grows. */
+@media (min-width: 981px) {
+  .hero-background {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 560px;
+    max-width: none;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+@media (min-width: 1181px) {
+  .hero-visual {
+    left: auto;
+    right: 0;
+    transform: none;
+  }
+}
