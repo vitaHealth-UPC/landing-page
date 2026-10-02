@@ -37,13 +37,17 @@
         </button>
         <a class="button button-login" href="#login" data-i18n="actions.login">Iniciar sesión</a>
         <a class="button button-start" href="#plans" data-i18n="actions.start">Comenzar</a>
+        <button class="mobile-menu-button" type="button" aria-label="Open navigation" aria-expanded="false" data-mobile-menu>≡</button>
       </div>
     </div>
   </header>
 
   <main id="main-content">
     <section id="home" class="hero" data-node-id="405:21">
-      <img class="hero-background" src="assets/images/hero-background.png" alt="" aria-hidden="true">
+      <picture class="hero-background-picture" aria-hidden="true">
+        <source media="(max-width: 430px)" srcset="assets/images/hero-background-mobile.png">
+        <img class="hero-background" src="assets/images/hero-background.png" alt="">
+      </picture>
 
       <div class="hero-copy" data-node-id="405:22">
         <p class="hero-pill" data-i18n="hero.eyebrow">TRANQUILIDAD PARA TODA LA FAMILIA</p>
@@ -81,7 +85,7 @@
           <img src="assets/icons/confirmation-check.png" alt="" aria-hidden="true">
           <div>
             <strong data-i18n="hero.done.title">¡Listo!</strong>
-            <span data-i18n="hero.done.text">Medicamento confirmado<br>9:02 a. m.</span>
+            <span data-i18n="hero.done.text" data-i18n-mobile="hero.mobile.done.text">Medicamento confirmado<br>9:02 a. m.</span>
           </div>
         </article>
 
@@ -228,33 +232,63 @@
 
       <div class="app-showcase-copy">
         <p class="app-kicker" data-i18n="app.kicker">LA APP DE TATA</p>
-        <h2 data-i18n="app.title">Todo tu cuidado, en un solo lugar</h2>
-        <p class="app-description" data-i18n="app.description">Recordatorios, medicamentos, agenda y seguimiento familiar reunidos en una experiencia clara y sencilla.</p>
+        <h2 data-i18n="app.title" data-i18n-mobile="app.mobile.title">Todo tu cuidado, en un solo lugar</h2>
+        <p class="app-description" data-i18n="app.description" data-i18n-mobile="app.mobile.description">Recordatorios, medicamentos, agenda y seguimiento familiar reunidos en una experiencia clara y sencilla.</p>
 
-        <ul class="app-benefits">
+        <ul class="app-benefits app-benefits-desktop">
           <li><img src="assets/icons/app-check.png" alt="" aria-hidden="true"><span data-i18n="app.benefit1">Confirma tus tomas en segundos.</span></li>
           <li><img src="assets/icons/app-check.png" alt="" aria-hidden="true"><span data-i18n="app.benefit2">Consulta horarios, avances y recordatorios.</span></li>
           <li><img src="assets/icons/app-check.png" alt="" aria-hidden="true"><span data-i18n="app.benefit3">Mantén a tu familia informada en tiempo real.</span></li>
         </ul>
 
-        <a class="app-cta" href="#how-it-works">
-          <span data-i18n="app.cta">Explorar la app</span>
-          <span aria-hidden="true">→</span>
+        <ul class="app-benefits app-benefits-mobile">
+          <li><img src="assets/icons/app-check.png" alt="" aria-hidden="true"><span data-i18n="app.mobile.benefit1">Consulta tus tratamientos activos</span></li>
+          <li><img src="assets/icons/app-check.png" alt="" aria-hidden="true"><span data-i18n="app.mobile.benefit2">Confirma tomas en pocos pasos</span></li>
+          <li><img src="assets/icons/app-check.png" alt="" aria-hidden="true"><span data-i18n="app.mobile.benefit3">Tu familia puede acompañarte</span></li>
+        </ul>
+
+        <a class="app-cta app-cta-desktop" href="#how-it-works">
+          <span data-i18n="app.cta">Explorar la app</span><span aria-hidden="true">→</span>
         </a>
+        <a class="app-cta app-cta-mobile" href="#how-it-works" data-i18n="app.mobile.cta">Conocer la app</a>
       </div>
 
       <div class="app-showcase-phones" aria-label="Tata mobile app previews">
-        <img class="app-phone app-phone-medications" src="assets/images/app-phone-medications.png" alt="Vista de medicamentos de Tata">
-        <img class="app-phone app-phone-home" src="assets/images/app-phone-home.png" alt="Pantalla de inicio de Tata">
-        <img class="app-phone app-phone-family" src="assets/images/app-phone-family.png" alt="Resumen familiar de Tata">
+        <img class="app-phone app-phone-medications"
+          src="assets/images/app-phone-medications-en.png"
+          data-src-en="assets/images/app-phone-medications-en.png"
+          data-src-es="assets/images/app-phone-medications.png"
+          data-src-mobile-en="assets/images/app-phone-medications-mobile-en.png"
+          data-src-mobile-es="assets/images/app-phone-medications-mobile-es.png"
+          alt="Medication screen in Tata">
+        <img class="app-phone app-phone-home"
+          src="assets/images/app-phone-home-en.png"
+          data-src-en="assets/images/app-phone-home-en.png"
+          data-src-es="assets/images/app-phone-home.png"
+          data-src-mobile-en="assets/images/app-phone-home-mobile-en.png"
+          data-src-mobile-es="assets/images/app-phone-home-mobile-es.png"
+          alt="Tata home screen">
+        <img class="app-phone app-phone-family"
+          src="assets/images/app-phone-family-en.png"
+          data-src-en="assets/images/app-phone-family-en.png"
+          data-src-es="assets/images/app-phone-family.png"
+          data-src-mobile-en="assets/images/app-phone-family-mobile-en.png"
+          data-src-mobile-es="assets/images/app-phone-family-mobile-es.png"
+          alt="Tata family summary">
+        <img class="app-mobile-pointer app-mobile-pointer-left" src="assets/icons/app-mobile-pointer-left.png" alt="" aria-hidden="true">
+        <img class="app-mobile-pointer app-mobile-pointer-right" src="assets/icons/app-mobile-pointer-right.png" alt="" aria-hidden="true">
+        <div class="app-mobile-badge">
+          <strong data-i18n="app.mobile.badge.title">Tata on your phone</strong>
+          <span data-i18n="app.mobile.badge.body">Clear, simple and always close.</span>
+        </div>
       </div>
     </section>
 
     <section id="how-it-works" class="how-section" data-node-id="405:107">
       <div class="how-heading" data-node-id="405:108">
         <p class="how-kicker" data-i18n="how.kicker">CÓMO FUNCIONA</p>
-        <h2 data-i18n="how.title">Comienza en solo 3 pasos</h2>
-        <p data-i18n="how.description">Es muy fácil, y en pocos minutos estarás listo.</p>
+        <h2 data-i18n="how.title" data-i18n-mobile="how.mobile.title">Comienza en solo 3 pasos</h2>
+        <p data-i18n="how.description" data-i18n-mobile="how.mobile.description">Es muy fácil, y en pocos minutos estarás listo.</p>
       </div>
 
       <div class="how-steps" data-node-id="405:112">
@@ -294,7 +328,7 @@
           <div class="step-icon"><img src="assets/icons/step-family.png" alt="" aria-hidden="true"></div>
           <div class="step-copy">
             <h3 data-i18n="how.step3.title">Comparte con tu familia</h3>
-            <p data-i18n="how.step3.text">Invita a tus familiares y comienza a recibir acompañamiento.</p>
+            <p data-i18n="how.step3.text" data-i18n-mobile="how.mobile.step3.text">Invita a tus familiares y comienza a recibir acompañamiento.</p>
           </div>
         </article>
       </div>
@@ -302,12 +336,15 @@
 
     <section id="testimonials" class="testimonial-section" data-node-id="405:133">
       <img class="testimonial-band" src="assets/images/testimonial-soft-band.png" alt="" aria-hidden="true">
-      <img class="testimonial-family" src="assets/images/testimonial-family.png" alt="Familia acompañando a un adulto mayor">
+      <picture class="testimonial-family-picture">
+        <source media="(max-width: 430px)" srcset="assets/images/testimonial-family-mobile.png">
+        <img class="testimonial-family" src="assets/images/testimonial-family.png" alt="Familia acompañando a un adulto mayor">
+      </picture>
 
       <div class="testimonial-quote" data-node-id="405:136">
         <span class="testimonial-open-quote" aria-hidden="true">“</span>
-        <blockquote data-i18n="testimonial.primary.quote">“Con Tata me siento más tranquilo. Ya no olvido mis medicamentos y mi hija siempre está al tanto.”</blockquote>
-        <p class="testimonial-author" data-i18n="testimonial.primary.author">José R., 72 años</p>
+        <blockquote data-i18n="testimonial.primary.quote" data-i18n-mobile="testimonial.mobile.primary.quote">“Con Tata me siento más tranquilo. Ya no olvido mis medicamentos y mi hija siempre está al tanto.”</blockquote>
+        <p class="testimonial-author" data-i18n="testimonial.primary.author" data-i18n-mobile="testimonial.mobile.primary.author">José R., 72 años</p>
         <p class="testimonial-role" data-i18n="testimonial.primary.role">Usuario de Tata</p>
 
         <img class="testimonial-heart testimonial-heart-large" src="assets/icons/testimonial-heart-large.png" alt="" aria-hidden="true">
@@ -316,7 +353,7 @@
         <span class="testimonial-separator" aria-hidden="true"></span>
 
         <div class="testimonial-secondary">
-          <p data-i18n="testimonial.secondary.quote">“Es una gran tranquilidad para toda la familia.”</p>
+          <p data-i18n="testimonial.secondary.quote" data-i18n-mobile="testimonial.mobile.secondary.quote">“Es una gran tranquilidad para toda la familia.”</p>
           <div class="testimonial-secondary-person">
             <img src="assets/images/testimonial-ana.png" alt="Ana">
             <strong data-i18n="testimonial.secondary.author">Ana, hija de José</strong>
@@ -329,8 +366,8 @@
     <section class="about-section" data-node-id="532:293">
       <div class="about-heading">
         <p class="about-kicker" data-i18n="aboutUs.kicker">QUIÉNES SOMOS</p>
-        <h2 data-i18n="aboutUs.title">Conoce la historia detrás de Tata</h2>
-        <p data-i18n="aboutUs.description">Dos miradas para entender el propósito del producto y a las personas que lo están construyendo.</p>
+        <h2 data-i18n="aboutUs.title" data-i18n-mobile="aboutUs.mobile.title">Conoce la historia detrás de Tata</h2>
+        <p data-i18n="aboutUs.description" data-i18n-mobile="aboutUs.mobile.description">Dos miradas para entender el propósito del producto y a las personas que lo están construyendo.</p>
       </div>
 
       <div class="about-video-grid">
@@ -351,7 +388,7 @@
     </section>
 
     <section class="about-statement" data-node-id="532:318">
-      <p data-i18n="aboutUs.statement">Tecnología con propósito, diseñada para dar tranquilidad a toda la familia.</p>
+      <p data-i18n="aboutUs.statement" data-i18n-mobile="aboutUs.mobile.statement">Tecnología con propósito, diseñada para dar tranquilidad a toda la familia.</p>
     </section>
 
     <section id="plans" class="pricing-section" data-node-id="405:144">
@@ -418,19 +455,22 @@
     <section id="faq" class="support-section" data-node-id="405:180">
       <div class="support-copy" data-node-id="405:181">
         <p class="support-kicker" data-i18n="support.kicker">¿TIENES PREGUNTAS?</p>
-        <h2 data-i18n="support.title">Estamos para ayudarte</h2>
-        <p data-i18n="support.description">Si tienes dudas sobre cómo funciona Tata, los planes o necesitas asistencia, nuestro equipo estará encantado de ayudarte.</p>
-        <a class="support-contact" href="mailto:soporte@tataapp.com">
+        <h2 data-i18n="support.title" data-i18n-mobile="support.mobile.title">Estamos para ayudarte</h2>
+        <p data-i18n="support.description" data-i18n-mobile="support.mobile.description">Si tienes dudas sobre cómo funciona Tata, los planes o necesitas asistencia, nuestro equipo estará encantado de ayudarte.</p>
+        <a class="support-contact" href="mailto:support@tataapp.com" data-email-link data-email-en="support@tataapp.com" data-email-es="soporte@tataapp.com">
           <span data-i18n="support.cta">Contáctanos</span>
           <span aria-hidden="true">→</span>
         </a>
       </div>
 
       <div class="support-visual" aria-hidden="true">
-        <img class="support-character" src="assets/images/support-character.png" alt="">
+        <picture class="support-character-picture">
+          <source media="(max-width: 430px)" srcset="assets/images/support-illustration-mobile.png">
+          <img class="support-character" src="assets/images/support-character.png" alt="">
+        </picture>
         <div class="support-bubble">
           <strong data-i18n="support.bubble.hello">¡Hola!</strong>
-          <span data-i18n="support.bubble.question">¿Cómo podemos ayudarte?</span>
+          <span data-i18n="support.bubble.question" data-i18n-mobile="support.mobile.bubble.question">¿Cómo podemos ayudarte?</span>
         </div>
       </div>
 
@@ -441,7 +481,7 @@
           <span class="support-icon"><img src="assets/icons/support-mail.png" alt="" aria-hidden="true"></span>
           <div>
             <h3 data-i18n="support.email.title">Soporte por correo</h3>
-            <p><a href="mailto:soporte@tataapp.com">soporte@tataapp.com</a></p>
+            <p><a href="mailto:support@tataapp.com" data-email-link data-email-en="support@tataapp.com" data-email-es="soporte@tataapp.com">support@tataapp.com</a></p>
           </div>
         </article>
 
@@ -463,12 +503,48 @@
       </div>
     </section>
 
+    <section class="cta-area" data-node-id="667:1145">
+      <div class="cta-banner">
+        <img class="cta-plant cta-plant-left" src="assets/images/cta-plant.png" alt="" aria-hidden="true">
+        <div class="cta-copy">
+          <p class="cta-kicker" data-i18n="cta.kicker">HOY TAMBIÉN ES UN BUEN DÍA</p>
+          <h2 data-i18n="cta.title">Empieza a cuidar tu salud con Tata</h2>
+          <p data-i18n="cta.description">Únete a las familias que ya disfrutan de más tranquilidad y bienestar.</p>
+        </div>
+        <a class="cta-button" href="#plans"><span data-i18n="cta.button">Comenzar ahora</span><span aria-hidden="true">→</span></a>
+        <img class="cta-plant cta-plant-right" src="assets/images/cta-plant.png" alt="" aria-hidden="true">
+      </div>
+    </section>
+
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span data-current-year></span> VitaHealth UPC · Tata</p>
+  <footer class="site-footer" data-node-id="667:1155">
+    <div class="footer-top">
+      <a class="footer-brand" href="#home" aria-label="Tata home">
+        <img src="assets/logo/tata-wordmark.png" alt="Tata">
+      </a>
+      <p class="footer-tagline" data-i18n="footer.tagline">Más salud. Más acompañamiento. Todos los días.</p>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="#about" data-i18n="nav.about">Qué es Tata</a>
+        <a href="#how-it-works" data-i18n="nav.how">Cómo funciona</a>
+        <a href="#plans" data-i18n="nav.plans">Planes</a>
+        <a href="#testimonials" data-i18n="nav.testimonials">Testimonios</a>
+        <a href="#faq" data-i18n="nav.faq">Preguntas frecuentes</a>
+        <a href="#faq" data-i18n="footer.contact" data-i18n-mobile="footer.mobile.contact">Contáctanos</a>
+      </nav>
+      <span class="footer-social-divider" aria-hidden="true"></span>
+      <div class="footer-socials" aria-label="Social networks">
+        <a href="#" aria-label="Instagram"><img src="assets/icons/social-instagram.png" alt=""></a>
+        <a href="#" aria-label="Facebook"><img src="assets/icons/social-facebook.png" alt=""></a>
+        <a href="#" aria-label="LinkedIn"><img src="assets/icons/social-linkedin.png" alt=""></a>
+      </div>
     </div>
+    <div class="footer-divider"></div>
+    <div class="footer-legal">
+      <p>© <span data-current-year></span> Tata. <span data-i18n="footer.rights">Todos los derechos reservados.</span></p>
+      <p><a href="#" data-i18n="footer.terms">Términos de servicio</a><a href="#" data-i18n="footer.privacy">Política de privacidad</a></p>
+    </div>
+    <p class="footer-legal-mobile" data-i18n="footer.mobile.legal">© 2026 Tata · Términos · Privacidad</p>
   </footer>
 
   <script src="js/i18n.js" defer></script>

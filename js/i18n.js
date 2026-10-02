@@ -12,10 +12,10 @@ const translations = {
     "actions.learn": "Learn more",
 
     "hero.eyebrow": "PEACE OF MIND FOR THE WHOLE FAMILY",
-    "hero.title.line1": "Care for your",
+    "hero.title.line1": "Manage your",
     "hero.title.line2": "medications",
-    "hero.title.line3": "without complications",
-    "hero.description": "Tata helps you remember your medications, confirm them simply and keep your family informed. More peace of mind and well-being every day.",
+    "hero.title.line3": "without the hassle",
+    "hero.description": "Tata helps you remember your medications, confirm them simply, and keep your family informed. More peace of mind, more well-being, every day.",
     "hero.trust.easy": "Easy to use",
     "hero.trust.card": "No credit card",
     "hero.trust.cancel": "Cancel anytime",
@@ -24,6 +24,7 @@ const translations = {
     "hero.card.confirm": "✓ Confirm",
     "hero.done.title": "Done!",
     "hero.done.text": "Medication confirmed\n9:02 a.m.",
+    "hero.mobile.done.text": "Confirmed\n9:02 a.m.",
     "hero.family.title": "Your family can see it ↑",
     "hero.family.confirmed": "Confirmed ✓",
     "hero.handwritten": "Small actions,\ngreat peace of mind",
@@ -40,56 +41,73 @@ const translations = {
     "value.family.title": "Made for families",
     "value.family.text": "Keep your loved ones informed.",
     "value.confirm.title": "Simple confirmations",
-    "value.confirm.text": "With a single tap.",
+    "value.confirm.text": "With one tap.",
     "value.safe.title": "Safe and private",
     "value.safe.text": "Your information stays protected.",
 
     "features.kicker": "EVERYTHING YOU NEED",
     "features.title": "A simpler, calmer way to care for your health",
-    "features.description": "Tata combines reminders, family support and recommendations so you never forget a medication.",
+    "features.description": "Tata combina reminders, family support support and recommendations so you never miss a medication.",
     "features.reminders.title": "Medication reminders",
-    "features.reminders.text": "Receive clear, friendly alerts at the right time.",
+    "features.reminders.text": "Get clear, friendly alerts at the right time.",
     "features.reminders.med": "Take Amlodipine",
-    "features.family.title": "Family follow-up",
-    "features.family.text": "Share your medication plan with your family so they can see your confirmations in real time.",
+    "features.family.title": "Family support",
+    "features.family.text": "Share your medication plan with your family, who can see your confirmations in real time.",
     "features.family.chip1": "Your family",
     "features.family.chip2": "always close",
     "features.insights.title": "Insights/recommendations",
-    "features.insights.text": "See your adherence level and receive suggestions to take better care of your health.",
+    "features.insights.text": "See your adherence level and get suggestions to better care for your health.",
     "features.insights.month": "Your adherence this month",
     "features.insights.note": "Small\nsteps,\nbig\nresults",
 
     "app.kicker": "THE TATA APP",
     "app.title": "All your care, in one place",
-    "app.description": "Reminders, medications, agenda and family follow-up brought together in a clear and simple experience.",
+    "app.description": "Reminders, medications, schedule, and family support in one clear, simple experience.",
     "app.benefit1": "Confirm your doses in seconds.",
     "app.benefit2": "Check schedules, progress and reminders.",
     "app.benefit3": "Keep your family informed in real time.",
     "app.cta": "Explore the app",
+    "app.mobile.title": "Everything you need, in one place",
+    "app.mobile.description": "View medications, confirm doses, and support your family through a clear, simple experience.",
+    "app.mobile.benefit1": "View your active treatments",
+    "app.mobile.benefit2": "Confirm doses in a few steps",
+    "app.mobile.benefit3": "Your family can support you",
+    "app.mobile.cta": "Explore the app",
+    "app.mobile.badge.title": "Designed to support you",
+    "app.mobile.badge.body": "Simple, accesible and family.",
 
     "how.kicker": "HOW IT WORKS",
-    "how.title": "Start in just 3 steps",
-    "how.description": "It is easy, and in just a few minutes you will be ready.",
+    "how.title": "Get started in just 3 steps",
+    "how.description": "It’s easy, and you’ll be ready in just a few minutes.",
+    "how.mobile.title": "Get started in just 3 steps",
+    "how.mobile.description": "It’s easy, and you’ll be ready in just a few minutes.",
+    "how.mobile.step3.text": "Invite family members and start receiving support.",
     "how.step1.title": "Create your account",
-    "how.step1.text": "Sign up with your email address or phone number.",
+    "how.step1.text": "Sign up with your email or phone number.",
     "how.step2.title": "Add your medications",
-    "how.step2.text": "Add medications, doses and schedules.",
+    "how.step2.text": "Add your medications, doses, and schedules.",
     "how.step3.title": "Share with your family",
-    "how.step3.text": "Invite your relatives and start receiving support.",
-    "testimonial.primary.quote": "“With Tata I feel more at ease. I no longer forget my medications, and my daughter is always informed.”",
+    "how.step3.text": "Invite your family and start receiving support.",
+    "testimonial.primary.quote": "“With Tata I feel more at ease. I no longer forget my medications and my daughter is always informed.”",
     "testimonial.primary.author": "José R., 72 years old",
     "testimonial.primary.role": "Tata user",
-    "testimonial.secondary.quote": "“It brings great peace of mind to the whole family.”",
+    "testimonial.mobile.primary.quote": "“With Tata I feel more at ease. I no longer forget my medications and my daughter always knows how I’m doing.”",
+    "testimonial.mobile.primary.author": "José R., 72 years old - Tata user",
+    "testimonial.mobile.secondary.quote": "“It brings great peace of mind to the whole family.”",
+    "testimonial.secondary.quote": "“It brings great peace of mind for the whole family.”",
     "testimonial.secondary.author": "Ana, José's daughter",
 
     "aboutUs.kicker": "WHO WE ARE",
-    "aboutUs.title": "Discover the story behind Tata",
-    "aboutUs.description": "Two perspectives to understand the purpose of the product and the people building it.",
+    "aboutUs.title": "Learn the story behind Tata",
+    "aboutUs.description": "Two perspectives to understand the product purpose and the people building it.",
     "aboutUs.product.title": "About Tata",
     "aboutUs.product.note": "A look at the experience and its key features",
     "aboutUs.team.title": "Meet the team",
     "aboutUs.team.note": "Discover the vision and purpose guiding the product",
     "aboutUs.statement": "Technology with purpose, designed to bring peace of mind to the whole family.",
+    "aboutUs.mobile.title": "See how Tata supports families",
+    "aboutUs.mobile.description": "Two perspectives to understand the product and the people behind it.",
+    "aboutUs.mobile.statement": "Simple technology to care, support, and bring peace of mind.",
 
     "plans.kicker": "PLANS",
     "plans.title": "Choose the plan that fits you",
@@ -110,20 +128,35 @@ const translations = {
     "plans.family.f1": "Everything in Essential",
     "plans.family.f2": "Real-time family follow-up",
     "plans.family.f3": "Insights and recommendations",
-    "plans.family.f4": "Up to 5 family members",
+    "plans.family.f4": "Up to 5 families",
     "plans.family.f5": "Priority support",
     "plans.family.cta": "Start with Family",
     "support.kicker": "HAVE QUESTIONS?",
-    "support.title": "We are here to help",
-    "support.description": "If you have questions about how Tata works, the plans, or need assistance, our team will be happy to help.",
+    "support.title": "We’re here to help",
+    "support.description": "If you have questions about Tata, plans, or need help, our team will be happy to assist you.",
     "support.cta": "Contact us",
     "support.bubble.hello": "Hello!",
     "support.bubble.question": "How can we help you?",
     "support.email.title": "Email support",
     "support.hours.title": "Support hours",
-    "support.hours.text": "Mon - Fri, 8:00 a.m. - 6:00 p.m.",
+    "support.hours.text": "Mon - Vie, 8:00 a.m. - 6:00 p.m.",
     "support.help.title": "Help center",
-    "support.help.text": "Find answers to the most common questions in our help section.",
+    "support.help.text": "Find answers to common questions in our help center.",
+    "support.mobile.title": "We’re here to help",
+    "support.mobile.description": "If you have questions about Tata, plans, or need help, our team will be happy to assist you.",
+    "support.mobile.bubble.question": "How can we help?",
+
+    "cta.kicker": "TODAY IS A GOOD DAY TOO",
+    "cta.title": "Start caring for your health with Tata",
+    "cta.description": "Join thousands of families already enjoying more peace of mind and well-being.",
+    "cta.button": "Get started now",
+    "footer.tagline": "More health. More support. Every day.",
+    "footer.contact": "Contact us",
+    "footer.mobile.contact": "Contact",
+    "footer.rights": "All rights reserved.",
+    "footer.terms": "Terms of service",
+    "footer.privacy": "Privacy policy",
+    "footer.mobile.legal": "© 2026 Tata · Terms · Privacy",
 
     "testimonials.title": "Care that feels closer",
     "testimonials.quote": "“Now I can know whether my mom took her medication without calling her every little while.”",
@@ -157,6 +190,7 @@ const translations = {
     "hero.card.confirm": "✓ Confirmar",
     "hero.done.title": "¡Listo!",
     "hero.done.text": "Medicamento confirmado\n9:02 a. m.",
+    "hero.mobile.done.text": "Confirmado\n9:02 a. m.",
     "hero.family.title": "Tu familia lo ve ↑",
     "hero.family.confirmed": "Confirmado ✓",
     "hero.handwritten": "Pequeñas acciones,\ngran tranquilidad",
@@ -199,10 +233,21 @@ const translations = {
     "app.benefit2": "Consulta horarios, avances y recordatorios.",
     "app.benefit3": "Mantén a tu familia informada en tiempo real.",
     "app.cta": "Explorar la app",
+    "app.mobile.title": "Todo lo que necesitas, en un solo lugar",
+    "app.mobile.description": "Consulta medicamentos, confirma tomas y acompaña a tu familia desde una experiencia clara y sencilla.",
+    "app.mobile.benefit1": "Consulta tus tratamientos activos",
+    "app.mobile.benefit2": "Confirma tomas en pocos pasos",
+    "app.mobile.benefit3": "Tu familia puede acompañarte",
+    "app.mobile.cta": "Conocer la app",
+    "app.mobile.badge.title": "Diseñada para acompañarte",
+    "app.mobile.badge.body": "Simple, accesible y familiar.",
 
     "how.kicker": "CÓMO FUNCIONA",
     "how.title": "Comienza en solo 3 pasos",
     "how.description": "Es muy fácil, y en pocos minutos estarás listo.",
+    "how.mobile.title": "Comienza en solo 3 pasos",
+    "how.mobile.description": "Es muy fácil, y en pocos minutos estarás listo.",
+    "how.mobile.step3.text": "Invita a tus familiares y comienza a recibir acompañamiento.",
     "how.step1.title": "Crea tu cuenta",
     "how.step1.text": "Regístrate con tu correo o número de teléfono.",
     "how.step2.title": "Ingresa tus medicamentos",
@@ -212,6 +257,9 @@ const translations = {
     "testimonial.primary.quote": "“Con Tata me siento más tranquilo. Ya no olvido mis medicamentos y mi hija siempre está al tanto.”",
     "testimonial.primary.author": "José R., 72 años",
     "testimonial.primary.role": "Usuario de Tata",
+    "testimonial.mobile.primary.quote": "“Con Tata me siento más tranquilo. Ya no olvido mis medicamentos y mi hija siempre está al tanto.”",
+    "testimonial.mobile.primary.author": "José R., 72 años - Usuario de Tata",
+    "testimonial.mobile.secondary.quote": "“Es una gran tranquilidad para toda la familia.”",
     "testimonial.secondary.quote": "“Es una gran tranquilidad para toda la familia.”",
     "testimonial.secondary.author": "Ana, hija de José",
 
@@ -223,6 +271,9 @@ const translations = {
     "aboutUs.team.title": "Conoce al equipo",
     "aboutUs.team.note": "Conoce la visión y el propósito que guían el producto",
     "aboutUs.statement": "Tecnología con propósito, diseñada para dar tranquilidad a toda la familia.",
+    "aboutUs.mobile.title": "Conoce cómo Tata acompaña a las familias",
+    "aboutUs.mobile.description": "Dos miradas para entender el producto y a las personas detrás de él.",
+    "aboutUs.mobile.statement": "Tecnología sencilla para cuidar, acompañar y dar tranquilidad.",
 
     "plans.kicker": "PLANES",
     "plans.title": "Elige el plan que se adapta a ti",
@@ -257,6 +308,21 @@ const translations = {
     "support.hours.text": "Lun - Vie, 8:00 a. m. - 6:00 p. m.",
     "support.help.title": "Centro de ayuda",
     "support.help.text": "Encuentra respuestas a las preguntas más comunes en nuestra sección de ayuda.",
+    "support.mobile.title": "Estamos para ayudarte",
+    "support.mobile.description": "Si tienes dudas sobre cómo funciona Tata, los planes o necesitas asistencia, nuestro equipo estará encantado de ayudarte.",
+    "support.mobile.bubble.question": "¿Cómo podemos ayudarte?",
+
+    "cta.kicker": "HOY TAMBIÉN ES UN BUEN DÍA",
+    "cta.title": "Comienza a cuidar tu salud con Tata",
+    "cta.description": "Únete a miles de familias que ya disfrutan de más tranquilidad y bienestar.",
+    "cta.button": "Comenzar ahora",
+    "footer.tagline": "Más salud. Más compañía. Todos los días.",
+    "footer.contact": "Contáctanos",
+    "footer.mobile.contact": "Contacto",
+    "footer.rights": "Todos los derechos reservados.",
+    "footer.terms": "Términos de servicio",
+    "footer.privacy": "Política de privacidad",
+    "footer.mobile.legal": "© 2026 Tata · Términos · Privacidad",
 
     "testimonials.title": "Un cuidado que se siente más cerca",
     "testimonials.quote": "“Ahora puedo saber si mi mamá tomó su medicamento sin llamarla a cada rato.”",
@@ -269,24 +335,64 @@ const translations = {
 const DEFAULT_LOCALE = "en_US";
 const STORAGE_KEY = "tata-locale";
 
+function isMobileLayout() {
+  return window.matchMedia("(max-width: 430px)").matches;
+}
+
+function updateLocalizedEmail(locale) {
+  const suffix = locale === "es_419" ? "Es" : "En";
+
+  document.querySelectorAll("[data-email-en][data-email-es]").forEach((link) => {
+    const email = link.dataset[`email${suffix}`];
+
+    if (!email) return;
+
+    link.href = `mailto:${email}`;
+    if (!link.classList.contains("support-contact")) {
+      link.textContent = email;
+    }
+  });
+}
+
+function updateLocalizedAssets(locale) {
+  const suffix = locale === "es_419" ? "Es" : "En";
+  const mobile = isMobileLayout();
+
+  document.querySelectorAll("[data-src-en][data-src-es]").forEach((image) => {
+    const key = mobile ? `srcMobile${suffix}` : `src${suffix}`;
+    const source = image.dataset[key];
+
+    if (source) {
+      image.src = source;
+    }
+  });
+}
+
 function applyLocale(locale) {
   const dictionary = translations[locale] ?? translations[DEFAULT_LOCALE];
+  const mobile = isMobileLayout();
 
   document.documentElement.lang = locale === "es_419" ? "es-419" : "en";
 
   document.querySelectorAll("[data-i18n]").forEach((element) => {
-    const key = element.dataset.i18n;
+    const desktopKey = element.dataset.i18n;
+    const mobileKey = element.dataset.i18nMobile;
+    const key = mobile && mobileKey && dictionary[mobileKey] ? mobileKey : desktopKey;
+
     if (!dictionary[key]) return;
 
     const value = dictionary[key];
 
-    if (["hero.card.medication", "hero.done.text", "hero.handwritten", "features.insights.note"].includes(key)) {
+    if (value.includes("\n")) {
       element.innerHTML = value.replace(/\n/g, "<br>");
       return;
     }
 
     element.textContent = value;
   });
+
+  updateLocalizedAssets(locale);
+  updateLocalizedEmail(locale);
 
   const toggle = document.querySelector("[data-language-toggle]");
   const code = toggle?.querySelector(".language-code");
@@ -312,5 +418,11 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelector("[data-language-toggle]")?.addEventListener("click", () => {
     const current = localStorage.getItem(STORAGE_KEY) || DEFAULT_LOCALE;
     applyLocale(current === "en_US" ? "es_419" : "en_US");
+  });
+
+  const mobileQuery = window.matchMedia("(max-width: 430px)");
+  mobileQuery.addEventListener?.("change", () => {
+    const current = localStorage.getItem(STORAGE_KEY) || DEFAULT_LOCALE;
+    applyLocale(current);
   });
 });
