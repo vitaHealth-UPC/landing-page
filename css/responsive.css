@@ -2508,3 +2508,180 @@
     transform: none;
   }
 }
+
+
+/* Final fidelity + responsive corrections — 2026-10-02 */
+@media (min-width: 981px) {
+  .hero-handwritten {
+    left: 514px;
+  }
+  .hero-arrow-heart {
+    left: 650px;
+  }
+  .family-card {
+    height: 136px;
+    padding-top: 10px;
+    padding-bottom: 9px;
+  }
+  .family-member {
+    margin-top: 6px;
+  }
+  .family-member + .family-member {
+    margin-top: 2px;
+  }
+  html[lang="en"] .family-card {
+    width: 154px;
+    height: 136px;
+  }
+  html[lang="en"] .family-card > strong {
+    width: 100%;
+    font-size: 10.8px;
+    line-height: 14px;
+    white-space: nowrap;
+  }
+  html[lang="en"] .family-member p {
+    font-size: 8.35px;
+    line-height: 11.3px;
+  }
+
+  /* Give the three phone mockups the same visual presence they have in Figma
+     while keeping their raster exports below native width. */
+  .app-phone-medications {
+    left: 49.4%;
+    top: 146px;
+    width: clamp(218px, 15.25vw, 246px);
+    height: auto;
+  }
+  .app-phone-home {
+    left: 63.8%;
+    top: 68px;
+    width: clamp(210px, 14.75vw, 238px);
+    height: auto;
+  }
+  .app-phone-family {
+    left: 78.0%;
+    top: 130px;
+    width: clamp(218px, 15.25vw, 246px);
+    height: auto;
+  }
+  .app-desktop-badge {
+    left: 64.1%;
+    top: 548px;
+  }
+
+  .support-visual {
+    left: calc(50% - 175px);
+  }
+  .support-divider {
+    left: calc(50% + 310px);
+    top: 54px;
+    height: 235px;
+  }
+  .support-info {
+    left: calc(50% + 348px);
+  }
+}
+
+@media (min-width: 1181px) {
+  .hero-visual {
+    right: 0;
+  }
+}
+
+/* Tablet keeps the app mockups prominent without clipping the outer phones. */
+@media (min-width: 621px) and (max-width: 980px) {
+  .app-showcase-phones {
+    width: min(100%, 780px);
+    height: 500px;
+  }
+  .app-phone-medications {
+    left: calc(50% - 280px);
+    width: 220px;
+    height: auto;
+  }
+  .app-phone-home {
+    left: calc(50% - 108px);
+    width: 218px;
+    height: auto;
+  }
+  .app-phone-family {
+    left: calc(50% + 92px);
+    width: 220px;
+    height: auto;
+  }
+}
+
+/* 393px Figma mobile plus requested single-phone carousel enhancement. */
+@media (max-width: 430px) {
+  .app-showcase {
+    height: 1031px;
+    min-height: 1031px;
+  }
+  .app-showcase-phones {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 1031px;
+    margin: 0;
+    transform: none;
+    pointer-events: auto;
+  }
+  .app-phone {
+    left: 50% !important;
+    top: 456px !important;
+    width: 240px !important;
+    height: 442px !important;
+    object-fit: contain;
+    opacity: 0;
+    transform: translateX(-50%) translateX(34px) scale(.93);
+    transform-origin: center;
+    transition: opacity .42s ease, transform .48s ease;
+    pointer-events: none;
+  }
+  .app-phone.is-active {
+    opacity: 1;
+    transform: translateX(-50%) translateX(0) scale(1);
+    z-index: 3;
+  }
+  .app-mobile-pointer {
+    position: absolute;
+    top: 655px;
+    z-index: 6;
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 52px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    pointer-events: auto;
+  }
+  .app-mobile-pointer img {
+    width: 31px;
+    height: 38px;
+    object-fit: contain;
+  }
+  .app-mobile-pointer-left {
+    left: 28px;
+  }
+  .app-mobile-pointer-right {
+    left: auto;
+    right: 28px;
+  }
+  .app-mobile-badge {
+    top: 918px;
+  }
+
+  /* Figma mobile fades the testimonial photo vertically rather than at its sides. */
+  .testimonial-family {
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 11%, #000 87%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, #000 11%, #000 87%, transparent 100%);
+  }
+
+  /* The CTA foliage stays inside the rounded panel and blends at its raster edge. */
+  .cta-plant {
+    -webkit-mask-image: radial-gradient(ellipse at center, #000 60%, rgba(0,0,0,.86) 74%, transparent 100%);
+    mask-image: radial-gradient(ellipse at center, #000 60%, rgba(0,0,0,.86) 74%, transparent 100%);
+  }
+}
