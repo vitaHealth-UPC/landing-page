@@ -4,13 +4,30 @@ const translations = {
     "nav.how": "How it works",
     "nav.plans": "Plans",
     "nav.testimonials": "Testimonials",
-    "nav.faq": "FAQ",
+    "nav.faq": "Frequently asked questions",
     "actions.login": "Log in",
     "actions.start": "Get started",
+    "actions.startNow": "Get started now",
+    "actions.how": "See how it works",
     "actions.learn": "Learn more",
-    "hero.eyebrow": "Medication care for everyday life",
-    "hero.title": "Care for your medications without making life complicated.",
-    "hero.description": "Friendly reminders, simple confirmations and family follow-up in one place.",
+
+    "hero.eyebrow": "PEACE OF MIND FOR THE WHOLE FAMILY",
+    "hero.title.line1": "Care for your",
+    "hero.title.line2": "medications",
+    "hero.title.line3": "without complications",
+    "hero.description": "Tata helps you remember your medications, confirm them simply and keep your family informed. More peace of mind and well-being every day.",
+    "hero.trust.easy": "Easy to use",
+    "hero.trust.card": "No credit card",
+    "hero.trust.cancel": "Cancel anytime",
+    "hero.card.time": "Today, 9:00 a.m.",
+    "hero.card.medication": "Take Amlodipine\n1 tablet (5 mg)",
+    "hero.card.confirm": "✓ Confirm",
+    "hero.done.title": "Done!",
+    "hero.done.text": "Medication confirmed\n9:02 a.m.",
+    "hero.family.title": "Your family can see it ↑",
+    "hero.family.confirmed": "Confirmed ✓",
+    "hero.handwritten": "Small actions,\ngreat peace of mind",
+
     "about.title": "More peace of mind for you and your family",
     "about.reminders.title": "Reminders",
     "about.reminders.text": "Clear schedules and medication notices.",
@@ -33,6 +50,7 @@ const translations = {
     "faq.q1": "Who is Tata for?",
     "faq.a1": "For older adults and the relatives or caregivers who support them."
   },
+
   es_419: {
     "nav.about": "Qué es Tata",
     "nav.how": "Cómo funciona",
@@ -41,10 +59,27 @@ const translations = {
     "nav.faq": "Preguntas frecuentes",
     "actions.login": "Iniciar sesión",
     "actions.start": "Comenzar",
+    "actions.startNow": "Comenzar ahora",
+    "actions.how": "Conocer cómo funciona",
     "actions.learn": "Conocer más",
-    "hero.eyebrow": "Acompañamiento para tus medicamentos",
-    "hero.title": "Cuida tus medicamentos sin complicarte.",
-    "hero.description": "Recordatorios amables, confirmaciones sencillas y seguimiento familiar desde un solo lugar.",
+
+    "hero.eyebrow": "TRANQUILIDAD PARA TODA LA FAMILIA",
+    "hero.title.line1": "Cuidar los",
+    "hero.title.line2": "medicamentos",
+    "hero.title.line3": "sin complicarte",
+    "hero.description": "Tata te ayuda a recordar tus medicamentos, confirmarlos de forma simple y mantener a tu familia siempre informada. Más tranquilidad, más bienestar, todos los días.",
+    "hero.trust.easy": "Fácil de usar",
+    "hero.trust.card": "Sin tarjeta de crédito",
+    "hero.trust.cancel": "Cancela cuando quieras",
+    "hero.card.time": "Hoy, 9:00 a. m.",
+    "hero.card.medication": "Tomar Amlodipino\n1 tableta (5 mg)",
+    "hero.card.confirm": "✓ Confirmar",
+    "hero.done.title": "¡Listo!",
+    "hero.done.text": "Medicamento confirmado\n9:02 a. m.",
+    "hero.family.title": "Tu familia lo ve ↑",
+    "hero.family.confirmed": "Confirmado ✓",
+    "hero.handwritten": "Pequeñas acciones,\ngran tranquilidad",
+
     "about.title": "Más tranquilidad para ti y tu familia",
     "about.reminders.title": "Recordatorios",
     "about.reminders.text": "Horarios claros y avisos de medicación.",
@@ -79,14 +114,26 @@ function applyLocale(locale) {
 
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     const key = element.dataset.i18n;
-    if (dictionary[key]) {
-      element.textContent = dictionary[key];
+    if (!dictionary[key]) return;
+
+    const value = dictionary[key];
+
+    if (key === "hero.card.medication" || key === "hero.done.text" || key === "hero.handwritten") {
+      element.innerHTML = value.replace(/\n/g, "<br>");
+      return;
     }
+
+    element.textContent = value;
   });
 
   const toggle = document.querySelector("[data-language-toggle]");
+  const code = toggle?.querySelector(".language-code");
+
+  if (code) {
+    code.textContent = locale === "en_US" ? "ES" : "EN";
+  }
+
   if (toggle) {
-    toggle.textContent = locale === "en_US" ? "ES" : "EN";
     toggle.setAttribute(
       "aria-label",
       locale === "en_US" ? "Cambiar idioma a español" : "Change language to English"
