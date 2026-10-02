@@ -379,3 +379,204 @@
     transform: scale(.85);
   }
 }
+
+
+@media (max-width: 1180px) {
+  .app-showcase-copy {
+    left: 48px;
+  }
+
+  .app-showcase-phones {
+    transform: translateX(-40px) scale(.92);
+    transform-origin: center right;
+  }
+
+  .how-section {
+    padding-inline: 48px;
+  }
+
+  .how-steps {
+    transform: scale(.9);
+    transform-origin: top center;
+  }
+}
+
+@media (max-width: 980px) {
+  .app-showcase {
+    height: auto;
+    min-height: 930px;
+    padding: 56px 28px 36px;
+  }
+
+  .app-showcase-copy {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: min(100%, 560px);
+    margin: 0 auto;
+  }
+
+  .app-showcase-copy h2,
+  .app-description {
+    width: 100%;
+  }
+
+  .app-benefits {
+    margin-top: 34px;
+  }
+
+  .app-cta {
+    margin-top: 34px;
+  }
+
+  .app-showcase-phones {
+    position: relative;
+    height: 470px;
+    margin: 24px auto 0;
+    width: min(100%, 720px);
+    transform: none;
+  }
+
+  .app-wash-large {
+    left: 50%;
+    top: 360px;
+    transform: translateX(-50%);
+  }
+
+  .app-wash-small {
+    right: 4%;
+    left: auto;
+    top: 620px;
+  }
+
+  .app-phone-medications {
+    left: calc(50% - 255px);
+    top: 68px;
+  }
+
+  .app-phone-home {
+    left: calc(50% - 96px);
+    top: 0;
+  }
+
+  .app-phone-family {
+    left: calc(50% + 78px);
+    top: 68px;
+  }
+
+  .how-section {
+    padding: 56px 28px 64px;
+  }
+
+  .how-steps {
+    width: min(100%, 620px);
+    height: auto;
+    margin-top: 30px;
+    display: grid;
+    gap: 18px;
+    transform: none;
+  }
+
+  .how-step,
+  .how-step:nth-of-type(1),
+  .how-step:nth-of-type(2),
+  .how-step:nth-of-type(3) {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 100%;
+    min-height: 118px;
+  }
+
+  .step-chevron {
+    display: none;
+  }
+}
+
+@media (max-width: 620px) {
+  .app-showcase {
+    min-height: 900px;
+    padding-inline: 18px;
+  }
+
+  .app-showcase-copy h2 {
+    font-size: 29px;
+    line-height: 1.24;
+  }
+
+  .app-description {
+    font-size: 15px;
+  }
+
+  .app-showcase-phones {
+    height: 420px;
+    width: 100%;
+    transform: scale(.82);
+    transform-origin: top center;
+  }
+
+  .app-phone-medications {
+    left: calc(50% - 245px);
+  }
+
+  .app-phone-home {
+    left: calc(50% - 96px);
+  }
+
+  .app-phone-family {
+    left: calc(50% + 65px);
+  }
+
+  .how-heading h2 {
+    font-size: 29px;
+  }
+
+  .how-step {
+    min-height: 132px;
+  }
+
+  .step-icon {
+    left: 42px;
+  }
+
+  .step-copy {
+    left: 126px;
+    width: calc(100% - 126px);
+  }
+}
+
+@media (max-width: 430px) {
+  .app-showcase {
+    min-height: 820px;
+  }
+
+  .app-showcase-phones {
+    height: 350px;
+    margin-top: 12px;
+    transform: scale(.68);
+  }
+
+  .how-section {
+    padding-inline: 18px;
+  }
+
+  .step-number {
+    left: 0;
+  }
+
+  .step-icon {
+    left: 38px;
+    width: 64px;
+    height: 64px;
+  }
+
+  .step-icon img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .step-copy {
+    left: 116px;
+    width: calc(100% - 116px);
+  }
+}
