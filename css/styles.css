@@ -1133,3 +1133,281 @@ body {
   height: 39px;
   object-fit: contain;
 }
+
+
+/* Figma 532:2 — App showcase */
+.app-showcase {
+  position: relative;
+  height: 650px;
+  overflow: hidden;
+  background: #f8f7ff;
+}
+
+.app-wash {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+}
+
+.app-wash-large {
+  left: calc(50% + 40px);
+  top: 42px;
+  width: 560px;
+  height: 560px;
+}
+
+.app-wash-small {
+  left: calc(50% + 395px);
+  top: 355px;
+  width: 240px;
+  height: 240px;
+}
+
+.app-showcase-copy {
+  position: absolute;
+  left: max(40px, calc(50% - 602px));
+  top: 93px;
+  width: 500px;
+  z-index: 3;
+}
+
+.app-kicker {
+  margin: 0;
+  color: #695aec;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.32;
+}
+
+.app-showcase-copy h2 {
+  width: 500px;
+  margin: 13px 0 0;
+  color: #1b3a75;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.22;
+  letter-spacing: 0;
+}
+
+.app-description {
+  width: 470px;
+  margin: 16px 0 0;
+  color: #667391;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.app-benefits {
+  margin: 47px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 16px;
+}
+
+.app-benefits li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #1b3a75;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.app-benefits img {
+  width: 28px;
+  height: 28px;
+  flex: 0 0 auto;
+}
+
+.app-cta {
+  width: 150px;
+  height: 48px;
+  margin-top: 51px;
+  border-radius: 13px;
+  background: #1b3a75;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  text-decoration: none;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.app-showcase-phones {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.app-phone {
+  position: absolute;
+  object-fit: contain;
+  filter: drop-shadow(0 14px 17px rgba(31, 41, 77, .16));
+}
+
+.app-phone-medications {
+  left: calc(50% + 6px);
+  top: 153px;
+  width: 201px;
+  height: 393px;
+}
+
+.app-phone-home {
+  left: calc(50% + 210px);
+  top: 80px;
+  width: 193px;
+  height: 433px;
+}
+
+.app-phone-family {
+  left: calc(50% + 406px);
+  top: 152px;
+  width: 201px;
+  height: 393px;
+}
+
+/* Figma 405:107 — How it works */
+.how-section {
+  min-height: 356px;
+  padding: 51px 110px 66px;
+  background: #fff;
+}
+
+.how-heading {
+  width: min(820px, 100%);
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.how-kicker {
+  margin: 0;
+  color: #695aec;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.32;
+}
+
+.how-heading h2 {
+  margin: 6px 0 0;
+  color: #1b3a75;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.32;
+  letter-spacing: 0;
+}
+
+.how-heading > p:last-child {
+  margin: 0;
+  color: #606e87;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.32;
+}
+
+.how-steps {
+  position: relative;
+  width: min(1212px, 100%);
+  height: 142px;
+  margin: 12px auto 0;
+}
+
+.how-step {
+  position: absolute;
+  top: 16px;
+  width: 360px;
+  height: 118px;
+}
+
+.how-step:nth-of-type(1) { left: 0; }
+.how-step:nth-of-type(2) { left: 432px; }
+.how-step:nth-of-type(3) { left: 864px; width: 343px; }
+
+.step-number {
+  position: absolute;
+  left: 0;
+  top: 42px;
+  width: 34px;
+  height: 34px;
+}
+
+.step-number img {
+  width: 34px;
+  height: 34px;
+  display: block;
+}
+
+.step-number span {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.step-icon {
+  position: absolute;
+  left: 46px;
+  top: 23px;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #f2eeff;
+  display: grid;
+  place-items: center;
+}
+
+.step-icon img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.step-copy {
+  position: absolute;
+  left: 136px;
+  top: 27px;
+  width: 218px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.step-copy h3 {
+  margin: 0;
+  color: #1b3a75;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.32;
+}
+
+.step-copy p {
+  margin: 8px 0 0;
+  color: #0e1729;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.32;
+}
+
+.step-chevron {
+  position: absolute;
+  top: 55px;
+  width: 28px;
+  height: 28px;
+}
+
+.step-chevron-one { left: 377px; }
+.step-chevron-two { left: 809px; }
