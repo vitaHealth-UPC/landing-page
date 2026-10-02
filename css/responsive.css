@@ -775,3 +775,214 @@
     font-size: 21px;
   }
 }
+
+
+@media (max-width: 1180px) {
+  .pricing-intro {
+    left: 48px;
+  }
+
+  .pricing-cards {
+    left: 390px;
+    transform: scale(.9);
+    transform-origin: top left;
+  }
+
+  .support-copy {
+    left: 48px;
+  }
+
+  .support-visual {
+    left: 42%;
+    transform: scale(.9);
+    transform-origin: top left;
+  }
+
+  .support-divider {
+    left: 73%;
+  }
+
+  .support-info {
+    left: 77%;
+    width: 230px;
+  }
+}
+
+@media (max-width: 980px) {
+  .pricing-section {
+    min-height: 1120px;
+    padding: 56px 28px 64px;
+  }
+
+  .pricing-intro {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: min(100%, 560px);
+    margin: 0 auto;
+  }
+
+  .pricing-intro h2,
+  .pricing-description {
+    width: 100%;
+  }
+
+  .pricing-illustration {
+    position: relative;
+    left: auto;
+    top: auto;
+    margin-top: 18px;
+  }
+
+  .pricing-cards {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: min(100%, 620px);
+    height: 800px;
+    margin: 20px auto 0;
+    transform: none;
+  }
+
+  .pricing-essential,
+  .pricing-family {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .pricing-essential {
+    top: 0;
+  }
+
+  .pricing-family {
+    top: 440px;
+  }
+
+  .support-section {
+    height: auto;
+    min-height: 860px;
+    padding: 56px 28px 64px;
+  }
+
+  .support-copy {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: min(100%, 560px);
+    margin: 0 auto;
+  }
+
+  .support-copy h2,
+  .support-copy > p:last-of-type {
+    width: 100%;
+  }
+
+  .support-visual {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: min(100%, 520px);
+    height: 320px;
+    margin: 20px auto 0;
+    transform: none;
+  }
+
+  .support-character {
+    width: 320px;
+    height: 320px;
+  }
+
+  .support-bubble {
+    left: 300px;
+    top: 30px;
+  }
+
+  .support-divider {
+    display: none;
+  }
+
+  .support-info {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: min(100%, 560px);
+    height: auto;
+    margin: 18px auto 0;
+    grid-template-rows: none;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 620px) {
+  .pricing-section {
+    min-height: 1180px;
+    padding-inline: 16px;
+  }
+
+  .pricing-intro h2 {
+    font-size: 29px;
+  }
+
+  .pricing-cards {
+    height: 850px;
+  }
+
+  .pricing-essential,
+  .pricing-family {
+    width: min(100%, 390px);
+  }
+
+  .pricing-family {
+    top: 445px;
+    height: 470px;
+  }
+
+  .pricing-card-heading {
+    gap: 10px;
+  }
+
+  .pricing-summary {
+    width: calc(100% - 46px);
+  }
+
+  .pricing-family .pricing-summary {
+    width: calc(100% - 44px);
+  }
+
+  .pricing-button,
+  .pricing-family .pricing-button {
+    width: calc(100% - 46px);
+  }
+
+  .support-section {
+    min-height: 810px;
+    padding-inline: 16px;
+  }
+
+  .support-copy h2 {
+    font-size: 29px;
+  }
+
+  .support-visual {
+    height: 280px;
+  }
+
+  .support-character {
+    left: 50%;
+    width: 280px;
+    height: 280px;
+    transform: translateX(-50%);
+  }
+
+  .support-bubble {
+    left: auto;
+    right: 0;
+    top: 18px;
+    transform: scale(.85);
+    transform-origin: top right;
+  }
+
+  .support-row {
+    grid-template-columns: 42px 1fr;
+  }
+}
