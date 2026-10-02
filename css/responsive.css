@@ -184,3 +184,198 @@
     transform: translateX(-50%) scale(.58);
   }
 }
+
+
+@media (max-width: 1200px) {
+  .value-strip-inner {
+    width: calc(100% - 48px);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .value-divider {
+    display: none;
+  }
+
+  .value-item {
+    width: auto;
+  }
+
+  .value-item h2,
+  .value-item p {
+    width: auto;
+  }
+
+  .features-section {
+    padding-inline: 36px;
+  }
+
+  .feature-cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .tata-feature-card {
+    min-width: 0;
+  }
+
+  .feature-card-copy {
+    right: 18px;
+  }
+
+  .reminder-mini-ui {
+    left: 50%;
+    transform: translateX(-50%) rotate(-2.46deg) scale(.92);
+    transform-origin: center;
+  }
+
+  .family-mini-ui {
+    left: 50%;
+    transform: translateX(-50%) scale(.92);
+    transform-origin: center;
+  }
+
+  .insight-mini-ui {
+    left: 18px;
+  }
+
+  .insight-note {
+    left: auto;
+    right: 12px;
+  }
+
+  .insight-arrow {
+    left: auto;
+    right: 60px;
+  }
+}
+
+@media (max-width: 980px) {
+  .value-strip {
+    height: auto;
+    padding: 24px 0;
+  }
+
+  .value-strip-inner {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 22px;
+  }
+
+  .features-section {
+    min-height: auto;
+    padding: 56px 28px 64px;
+  }
+
+  .feature-cards {
+    margin-top: 34px;
+    grid-template-columns: 1fr;
+    max-width: 620px;
+    background: transparent;
+  }
+
+  .tata-feature-card {
+    width: 100%;
+  }
+
+  .reminder-mini-ui,
+  .family-mini-ui {
+    transform: translateX(-50%) scale(1);
+  }
+
+  .insight-mini-ui {
+    left: 23px;
+  }
+
+  .insight-note {
+    right: 40px;
+  }
+
+  .insight-arrow {
+    right: 96px;
+  }
+}
+
+@media (max-width: 620px) {
+  .value-strip-inner {
+    grid-template-columns: 1fr;
+    width: calc(100% - 32px);
+  }
+
+  .value-item {
+    justify-content: flex-start;
+  }
+
+  .features-section {
+    padding-inline: 16px;
+  }
+
+  .features-heading {
+    width: 100%;
+  }
+
+  .features-heading h2 {
+    font-size: 28px;
+    line-height: 1.25;
+  }
+
+  .features-heading > p:last-child {
+    font-size: 14px;
+  }
+
+  .tata-feature-card {
+    height: 330px;
+  }
+
+  .feature-card-copy {
+    grid-template-columns: 48px 1fr;
+    gap: 12px;
+  }
+
+  .feature-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .feature-icon img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .feature-card-copy h3 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .feature-card-copy p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .reminder-mini-ui {
+    top: 160px;
+    transform: translateX(-50%) rotate(-2.46deg) scale(.82);
+  }
+
+  .family-mini-ui {
+    top: 170px;
+    transform: translateX(-50%) scale(.84);
+  }
+
+  .insight-mini-ui {
+    top: 176px;
+    left: 16px;
+    transform: scale(.88);
+    transform-origin: top left;
+  }
+
+  .insight-note {
+    top: 185px;
+    right: 10px;
+    font-size: 14px;
+  }
+
+  .insight-arrow {
+    top: 254px;
+    right: 52px;
+    transform: scale(.85);
+  }
+}
