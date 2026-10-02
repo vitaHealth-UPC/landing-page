@@ -2685,3 +2685,47 @@
     mask-image: radial-gradient(ellipse at center, #000 60%, rgba(0,0,0,.86) 74%, transparent 100%);
   }
 }
+
+
+/* App preview scale + high-DPI source alignment — 2026-10-02 */
+@media (min-width: 981px) {
+  .app-phone-medications {
+    left: 50.7%;
+    top: 137px;
+    width: clamp(250px, 18.2vw, 272px);
+  }
+  .app-phone-home {
+    left: 64.2%;
+    top: 56px;
+    width: clamp(242px, 17.4vw, 260px);
+  }
+  .app-phone-family {
+    left: 78.1%;
+    top: 121px;
+    width: clamp(250px, 18.2vw, 272px);
+  }
+  .app-desktop-badge {
+    top: 554px;
+  }
+}
+
+@media (max-width: 430px) {
+  .app-phone {
+    top: 420px !important;
+    width: 278px !important;
+    height: 514px !important;
+    object-fit: contain;
+  }
+  .app-mobile-pointer {
+    top: 663px;
+  }
+  .app-mobile-pointer-left {
+    left: 20px;
+  }
+  .app-mobile-pointer-right {
+    right: 20px;
+  }
+  .app-mobile-badge {
+    top: 942px;
+  }
+}
