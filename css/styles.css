@@ -2209,7 +2209,9 @@ body {
 .mobile-menu-button,
 .app-benefits-mobile,
 .app-cta-mobile,
-.app-mobile-badge {
+.app-mobile-badge,
+.app-mobile-pointer,
+.footer-legal-mobile {
   display: none;
 }
 
