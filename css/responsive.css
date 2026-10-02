@@ -1516,7 +1516,7 @@
     top: 42px;
     width: 345px;
     margin: 0;
-    text-align: left;
+    text-align: center;
     z-index: 3;
   }
 
@@ -1547,6 +1547,7 @@
 
   .app-benefits-mobile {
     position: absolute;
+    text-align: left;
     left: 10px;
     top: 174px;
     width: 332px;
@@ -2355,5 +2356,38 @@
     font-size: 8px;
     line-height: normal;
     text-align: center;
+  }
+}
+
+
+@media (max-width: 430px) {
+  .main-nav.is-open {
+    position: absolute;
+    z-index: 50;
+    left: 18px;
+    right: 18px;
+    top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    margin: 0;
+    padding: 10px;
+    border: 1px solid #e5e5f0;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 10px 28px rgba(31, 41, 77, .14);
+    white-space: normal;
+  }
+
+  .main-nav.is-open a {
+    padding: 10px 12px;
+    border-radius: 10px;
+    font-size: 13px;
+  }
+
+  .main-nav.is-open a:hover,
+  .main-nav.is-open a:focus-visible {
+    background: #f0ebff;
   }
 }
