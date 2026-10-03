@@ -185,7 +185,6 @@
   }
 }
 
-
 @media (max-width: 1200px) {
   .value-strip-inner {
     width: calc(100% - 48px);
@@ -379,7 +378,6 @@
     transform: scale(.85);
   }
 }
-
 
 @media (max-width: 1180px) {
   .app-showcase-copy {
@@ -581,7 +579,6 @@
   }
 }
 
-
 @media (max-width: 1180px) {
   .testimonial-family {
     left: 0;
@@ -775,7 +772,6 @@
     font-size: 21px;
   }
 }
-
 
 @media (max-width: 1180px) {
   .pricing-intro {
@@ -987,8 +983,6 @@
   }
 }
 
-
-/* Exact mobile artboard fidelity: Figma 667:1184 / 553:2047 (393px) */
 @media (max-width: 430px) {
   html, body {
     overflow-x: hidden;
@@ -1049,7 +1043,7 @@
     cursor: pointer;
   }
 
-  /* Hero: 393 × 863 */
+  
   .hero {
     position: relative;
     width: 100%;
@@ -1310,7 +1304,7 @@
     line-height: 10px;
   }
 
-  /* Value strip: 393 × 243 */
+  
   .value-strip {
     position: relative;
     height: 243px;
@@ -1375,7 +1369,7 @@
     line-height: normal;
   }
 
-  /* Features: 393 × 1058 */
+  
   .features-section {
     position: relative;
     height: 1058px;
@@ -1501,7 +1495,7 @@
     transform: none;
   }
 
-  /* App showcase: 393 × 1031 */
+  
   .app-showcase {
     position: relative;
     height: 1031px;
@@ -1670,7 +1664,7 @@
     line-height: 20px;
   }
 
-  /* How it works: 393 × 538 */
+  
   .how-section {
     position: relative;
     height: 538px;
@@ -1779,7 +1773,7 @@
     background: #c7c2e5;
   }
 
-  /* Testimonial: 393 × 625 */
+  
   .testimonial-section {
     position: relative;
     height: 625px;
@@ -1908,7 +1902,7 @@
     font-size: 10px;
   }
 
-  /* About: 393 × 684 */
+  
   .about-section {
     position: relative;
     height: 684px;
@@ -1991,7 +1985,7 @@
     text-align: right;
   }
 
-  /* Statement: 393 × 132 */
+  
   .about-statement {
     height: 132px;
     min-height: 132px;
@@ -2005,7 +1999,7 @@
     line-height: normal;
   }
 
-  /* Pricing: 393 × 982 */
+  
   .pricing-section {
     position: relative;
     height: 982px;
@@ -2076,7 +2070,7 @@
     transform-origin: top left;
   }
 
-  /* Support: 393 × 616 */
+  
   .support-section {
     position: relative;
     height: 616px;
@@ -2205,7 +2199,7 @@
     margin-top: 0;
   }
 
-  /* CTA: 393 × 172 */
+  
   .cta-area {
     height: 172px;
     padding: 18px;
@@ -2269,7 +2263,7 @@
     font-size: 12px;
   }
 
-  /* Footer: 393 × 105 */
+  
   .site-footer {
     position: relative;
     height: 105px;
@@ -2359,7 +2353,6 @@
   }
 }
 
-
 @media (max-width: 430px) {
   .main-nav.is-open {
     position: absolute;
@@ -2392,11 +2385,6 @@
   }
 }
 
-
-/* Responsive fidelity QA — 2026-10-02 */
-/* Figma has dedicated 393px artboards. Intermediate widths interpolate, but
-   the handwritten hero annotation is intentionally desktop-only so it cannot
-   drift over the portrait. */
 @media (max-width: 980px) {
   .hero-background {
     left: 0;
@@ -2451,8 +2439,6 @@
   }
 }
 
-/* Match the explicit 393px Figma artboards without allowing locale changes
-   to escape the small floating cards. */
 @media (max-width: 430px) {
   .family-card {
     overflow: hidden;
@@ -2482,13 +2468,6 @@
   }
 }
 
-
-/* Hero final-crop fidelity — 2026-10-02 */
-/* hero-background.png is already the final 1440×560 Figma crop. Do not apply
-   the raw-image fill transform a second time. On wide desktop, keep the
-   overlay canvas attached to the right edge so the handwritten note and
-   floating cards stay registered with the portrait instead of drifting over
-   the subject as the viewport grows. */
 @media (min-width: 981px) {
   .hero-background {
     left: 0;
@@ -2509,8 +2488,6 @@
   }
 }
 
-
-/* Final fidelity + responsive corrections — 2026-10-02 */
 @media (min-width: 981px) {
   .hero-handwritten {
     left: 514px;
@@ -2544,8 +2521,7 @@
     line-height: 11.3px;
   }
 
-  /* Give the three phone mockups the same visual presence they have in Figma
-     while keeping their raster exports below native width. */
+  
   .app-phone-medications {
     left: 49.4%;
     top: 146px;
@@ -2588,7 +2564,6 @@
   }
 }
 
-/* Tablet keeps the app mockups prominent without clipping the outer phones. */
 @media (min-width: 621px) and (max-width: 980px) {
   .app-showcase-phones {
     width: min(100%, 780px);
@@ -2611,7 +2586,6 @@
   }
 }
 
-/* 393px Figma mobile plus requested single-phone carousel enhancement. */
 @media (max-width: 430px) {
   .app-showcase {
     height: 1031px;
@@ -2673,20 +2647,19 @@
     top: 918px;
   }
 
-  /* Figma mobile fades the testimonial photo vertically rather than at its sides. */
+  
   .testimonial-family {
     -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 11%, #000 87%, transparent 100%);
     mask-image: linear-gradient(to bottom, transparent 0%, #000 11%, #000 87%, transparent 100%);
   }
 
-  /* The CTA foliage stays inside the rounded panel and blends at its raster edge. */
+  
   .cta-plant {
     -webkit-mask-image: radial-gradient(ellipse at center, #000 60%, rgba(0,0,0,.86) 74%, transparent 100%);
     mask-image: radial-gradient(ellipse at center, #000 60%, rgba(0,0,0,.86) 74%, transparent 100%);
   }
 }
 
-/* Final app-showcase and breakpoint pass */
 @media (min-width: 981px) {
   .app-phone-medications {
     left: 50.2%;
@@ -3129,15 +3102,12 @@
   }
 }
 
-
 @media (max-width: 430px) {
   html[lang="en"] .family-card > strong {
     font-size: 9.5px;
   }
 }
 
-
-/* Final hero alignment against Figma desktop coordinates */
 @media (min-width: 981px) {
   .hero-handwritten {
     left: 499px;
@@ -3160,11 +3130,6 @@
   }
 }
 
-
-/* Consolidated responsive fidelity pass — 2026-10-03 */
-
-/* Desktop and laptop: keep the Figma phone composition at its authored size.
-   The previous scaling made the phones crop out of the 650px showcase. */
 @media (min-width: 981px) {
   .app-showcase-phones {
     transform: none !important;
@@ -3204,8 +3169,6 @@
   }
 }
 
-/* Smooth the desktop -> tablet transition instead of letting the 1440px
-   coordinates overflow at common laptop widths such as 1246px. */
 @media (min-width: 981px) and (max-width: 1279px) {
   .header-shell {
     width: calc(100% - 40px);
@@ -3268,8 +3231,6 @@
   }
 }
 
-/* Mobile design is used consistently through 767px. This keeps the CSS,
-   image sources and carousel breakpoint on the same range. */
 @media (max-width: 767px) {
   .hero {
     position: relative;
@@ -3496,8 +3457,7 @@
     padding: 6px;
   }
 
-  /* App carousel: use the authored phone scale and restore the Figma gap
-     before the explanatory badge. */
+  
   .app-showcase {
     position: relative;
     height: 1031px;
@@ -3567,8 +3527,7 @@
     transform: translateX(-50%);
   }
 
-  /* Support: center the complete mobile illustration/callout composition,
-     rather than cropping the character at 431–767px. */
+  
   .support-section {
     position: relative;
     height: 616px;
@@ -3687,7 +3646,7 @@
     line-height: normal;
   }
 
-  /* CTA/footer: keep plants at the sides and under the copy. */
+  
   .cta-area {
     height: 172px;
     padding: 18px 0;
@@ -3808,11 +3767,6 @@
   }
 }
 
-/* Final responsive stabilization — 2026-10-03
-   One authoritative pass for compact desktop, tablet and mobile. */
-
-/* Compact desktop: keep the desktop language/assets, but stop fixed Figma
-   coordinates from overflowing when the viewport is narrower than 1280px. */
 @media (min-width: 1100px) and (max-width: 1279px) {
   .header-shell {
     width: calc(100% - 48px);
@@ -4279,7 +4233,6 @@
   }
 }
 
-/* Tablet / small desktop: stop using desktop fixed coordinates altogether. */
 @media (min-width: 768px) and (max-width: 1099px) {
   .site-header,
   .header-shell {
@@ -4750,8 +4703,6 @@
   }
 }
 
-/* Mobile artboards remain Figma-authored, but the family status card and CTA
-   must grow with translated content instead of clipping it. */
 @media (max-width: 767px) {
   .family-card {
     width: 154px;
@@ -4879,5 +4830,142 @@
   .cta-plant-right {
     right: 23px;
     top: -2px;
+  }
+}
+
+
+@media (min-width: 431px) and (max-width: 767px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .site-header,
+  .header-shell,
+  main,
+  .hero {
+    max-width: 100%;
+  }
+
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 863px;
+    min-height: 863px;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .hero-copy {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    max-width: none;
+    height: 863px;
+    margin: 0;
+    transform: none;
+    text-align: center;
+  }
+
+  .hero-pill {
+    position: absolute;
+    left: 50%;
+    right: auto;
+    top: 32px;
+    width: min(238px, calc(100% - 40px));
+    transform: translateX(-50%);
+  }
+
+  .hero h1 {
+    position: absolute;
+    left: 50%;
+    right: auto;
+    top: 65px;
+    width: min(390px, calc(100% - 48px));
+    max-width: 390px;
+    height: auto;
+    margin: 0;
+    transform: translateX(-50%);
+    font-size: clamp(36px, 7vw, 40px);
+    line-height: 1.04;
+    letter-spacing: -1.35px;
+    text-align: center;
+  }
+
+  .hero-description {
+    position: absolute;
+    left: 50%;
+    right: auto;
+    top: 214px;
+    width: min(390px, calc(100% - 48px));
+    max-width: 390px;
+    margin: 0;
+    transform: translateX(-50%);
+    font-size: 13px;
+    line-height: 1.55;
+    text-align: center;
+  }
+
+  .hero-actions {
+    position: absolute;
+    left: 50%;
+    right: auto;
+    top: 318px;
+    width: min(390px, calc(100% - 48px));
+    height: 106px;
+    margin: 0;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .hero-primary,
+  .hero-secondary {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    flex: none;
+  }
+
+  .trust-row {
+    position: absolute;
+    left: 50%;
+    right: auto;
+    top: 433px;
+    width: min(280px, calc(100% - 64px));
+    margin: 0;
+    transform: translateX(-50%);
+  }
+
+  html[lang="en"] .trust-row {
+    width: min(280px, calc(100% - 64px));
+  }
+
+  .hero-visual {
+    position: absolute;
+    left: 50%;
+    right: auto;
+    top: 0;
+    width: 393px;
+    max-width: none;
+    height: 863px;
+    margin: 0;
+    transform: translateX(-50%);
+    transform-origin: top center;
+  }
+}
+
+@media (max-width: 767px) {
+  .family-card .family-avatar img {
+    display: block;
+    width: 12px;
+    height: 12px;
+    margin: auto;
+    object-fit: contain;
+    border-radius: 0;
+    opacity: 1;
   }
 }
