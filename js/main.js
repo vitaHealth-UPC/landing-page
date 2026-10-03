@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const appCarousel = document.querySelector(".app-showcase-phones");
   const appSlides = appCarousel ? Array.from(appCarousel.querySelectorAll(".app-phone")) : [];
-  const carouselMedia = window.matchMedia("(max-width: 430px)");
+  const carouselMedia = window.matchMedia("(max-width: 767px)");
   let appSlideIndex = 1;
   let appCarouselTimer = null;
 
