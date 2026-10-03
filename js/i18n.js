@@ -25,7 +25,7 @@ const translations = {
     "hero.done.title": "Done!",
     "hero.done.text": "Medication confirmed\n9:02 a.m.",
     "hero.mobile.done.text": "Confirmed\n9:02 a.m.",
-    "hero.family.title": "Your family can see it ↑",
+    "hero.family.title": "Your family sees it ↑",
     "hero.family.confirmed": "Confirmed ✓",
     "hero.handwritten": "Small actions,\ngreat peace of mind",
 
@@ -47,7 +47,7 @@ const translations = {
 
     "features.kicker": "EVERYTHING YOU NEED",
     "features.title": "A simpler, calmer way to care for your health",
-    "features.description": "Tata combina reminders, family support support and recommendations so you never miss a medication.",
+    "features.description": "Tata combines reminders, family support, and recommendations so you never miss a medication.",
     "features.reminders.title": "Medication reminders",
     "features.reminders.text": "Get clear, friendly alerts at the right time.",
     "features.reminders.med": "Take Amlodipine",
