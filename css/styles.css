@@ -2651,3 +2651,30 @@ body {
     line-height: 12px;
   }
 }
+
+
+/* Consolidated final fidelity pass — 2026-10-03 */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.medication-symbol {
+  background: #f0ebff;
+}
+
+.medication-symbol img {
+  display: block;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.confirmed-card > img {
+  box-sizing: border-box;
+  border-radius: 50%;
+  background: #eaf6ee;
+  padding: 6px;
+  object-fit: contain;
+}
