@@ -3159,3 +3159,651 @@
     line-height: 12px;
   }
 }
+
+
+/* Consolidated responsive fidelity pass — 2026-10-03 */
+
+/* Desktop and laptop: keep the Figma phone composition at its authored size.
+   The previous scaling made the phones crop out of the 650px showcase. */
+@media (min-width: 981px) {
+  .app-showcase-phones {
+    transform: none !important;
+    transform-origin: initial !important;
+  }
+
+  .app-phone-medications {
+    left: calc(50% + 7px) !important;
+    top: 153px !important;
+    width: 201px !important;
+    height: auto !important;
+    transform: rotate(5deg) !important;
+    transform-origin: center !important;
+  }
+
+  .app-phone-home {
+    left: calc(50% + 210px) !important;
+    top: 80px !important;
+    width: 193px !important;
+    height: auto !important;
+    transform: none !important;
+    z-index: 3;
+  }
+
+  .app-phone-family {
+    left: calc(50% + 406px) !important;
+    top: 137px !important;
+    width: 201px !important;
+    height: auto !important;
+    transform: rotate(-5deg) !important;
+    transform-origin: center !important;
+  }
+
+  .app-desktop-badge {
+    left: calc(50% + 199px) !important;
+    top: 546px !important;
+  }
+}
+
+/* Smooth the desktop -> tablet transition instead of letting the 1440px
+   coordinates overflow at common laptop widths such as 1246px. */
+@media (min-width: 981px) and (max-width: 1279px) {
+  .header-shell {
+    width: calc(100% - 40px);
+    max-width: none;
+  }
+
+  .main-nav {
+    margin-left: 34px;
+    gap: 18px;
+  }
+
+  .main-nav a {
+    font-size: 12px;
+  }
+
+  .header-actions {
+    gap: 12px;
+  }
+
+  .button-login {
+    width: 116px;
+  }
+
+  .button-start {
+    width: 100px;
+  }
+
+  .hero-copy {
+    left: 40px;
+    width: 450px;
+  }
+
+  .hero h1 {
+    width: 430px;
+    font-size: 48px;
+    line-height: 1.04;
+  }
+
+  .hero-description {
+    width: 430px;
+    font-size: 14px;
+  }
+
+  .hero-visual {
+    left: auto;
+    right: 0;
+    width: 800px;
+    transform: scale(.86);
+    transform-origin: top right;
+  }
+
+  .hero-handwritten {
+    left: 510px;
+    top: 8px;
+  }
+
+  .hero-arrow-heart {
+    left: 642px;
+    top: 70px;
+  }
+}
+
+/* Mobile design is used consistently through 767px. This keeps the CSS,
+   image sources and carousel breakpoint on the same range. */
+@media (max-width: 767px) {
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 863px;
+    min-height: 863px;
+    padding: 0;
+    display: block;
+    overflow: hidden;
+  }
+
+  .hero-background-picture {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 863px;
+  }
+
+  .hero-background {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 866px;
+    max-width: none;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .hero-copy {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 863px;
+    max-width: none;
+    margin: 0;
+    text-align: center;
+  }
+
+  .hero-pill {
+    left: 50%;
+    top: 32px;
+    width: 238px;
+    transform: translateX(-50%);
+  }
+
+  .hero h1 {
+    left: 50%;
+    top: 65px;
+    width: min(345px, calc(100% - 48px));
+    max-width: 345px;
+    height: auto;
+    margin: 0;
+    transform: translateX(-50%);
+    font-size: 36px;
+    line-height: 1.04;
+    letter-spacing: -1.35px;
+    text-align: center;
+  }
+
+  .hero-description {
+    left: 50%;
+    top: 209px;
+    width: min(333px, calc(100% - 48px));
+    max-width: 333px;
+    margin: 0;
+    transform: translateX(-50%);
+    font-size: 13px;
+    line-height: 1.55;
+    text-align: center;
+  }
+
+  .hero-actions {
+    left: 50%;
+    top: 314px;
+    width: min(345px, calc(100% - 48px));
+    height: 106px;
+    margin: 0;
+    transform: translateX(-50%);
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .hero-primary,
+  .hero-secondary {
+    width: 100%;
+    height: 46px;
+    min-height: 46px;
+    flex: none;
+  }
+
+  .trust-row {
+    left: 50%;
+    top: 431px;
+    width: min(261px, calc(100% - 80px));
+    margin: 0;
+    transform: translateX(-50%);
+  }
+
+  html[lang="en"] .trust-row {
+    width: min(261px, calc(100% - 80px));
+  }
+
+  .hero-visual {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 393px;
+    height: 863px;
+    margin: 0;
+    transform: translateX(-50%);
+    transform-origin: top center;
+    pointer-events: none;
+  }
+
+  .hero-handwritten,
+  .hero-arrow-heart {
+    display: none;
+  }
+
+  .medication-card {
+    left: 24px;
+    top: 522px;
+    width: 190px;
+    height: 118px;
+    border-radius: 14px;
+    box-shadow: none;
+  }
+
+  .medication-symbol {
+    left: 14px;
+    top: 14px;
+    width: 38px;
+    height: 38px;
+    background: #f0ebff;
+  }
+
+  .medication-symbol img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .family-card {
+    left: 31px;
+    top: 726px;
+    width: 143px;
+    height: 68px;
+    padding: 10px 14px;
+    overflow: hidden;
+    border: 0;
+    border-radius: 14px;
+    box-shadow: none;
+  }
+
+  .family-card > strong,
+  html[lang="en"] .family-card > strong {
+    display: block;
+    width: 120px;
+    font-size: 10px;
+    line-height: 12px;
+    white-space: nowrap;
+  }
+
+  .family-card .family-avatar {
+    display: none;
+  }
+
+  .family-member {
+    display: block;
+    margin: 8px 0 0;
+  }
+
+  .family-member + .family-member {
+    margin-top: 1px;
+  }
+
+  .family-member p {
+    width: 120px;
+    min-width: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3px;
+    color: #44506f;
+    font-size: 9px;
+    line-height: 10px;
+    white-space: nowrap;
+  }
+
+  .family-member p::before {
+    content: "●";
+    color: #44506f;
+    font-size: 6px;
+    line-height: 1;
+  }
+
+  .family-member p > span {
+    display: none;
+  }
+
+  .family-member b {
+    font-weight: 400;
+  }
+
+  .family-member em {
+    color: #69b85f;
+    font-weight: 600;
+  }
+
+  .confirmed-card {
+    left: 228px;
+    top: 777px;
+    width: 132px;
+    height: 70px;
+    padding: 12px 10px 8px 11px;
+    gap: 12px;
+    border-radius: 14px;
+    box-shadow: none;
+  }
+
+  .confirmed-card > img {
+    width: 29px;
+    height: 29px;
+    padding: 6px;
+  }
+
+  /* App carousel: use the authored phone scale and restore the Figma gap
+     before the explanatory badge. */
+  .app-showcase {
+    position: relative;
+    height: 1031px;
+    min-height: 1031px;
+    overflow: hidden;
+  }
+
+  .app-showcase-phones {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 1031px;
+    margin: 0;
+    transform: none !important;
+    pointer-events: auto;
+  }
+
+  .app-wash-large {
+    left: 50%;
+    top: 427px;
+    width: 560px;
+    height: 560px;
+    transform: translateX(-50%);
+  }
+
+  .app-phone {
+    left: 50% !important;
+    top: 477px !important;
+    width: min(52vw, 205px) !important;
+    height: auto !important;
+    object-fit: contain;
+    opacity: 0;
+    transform: translateX(-50%) translateX(24px) scale(.96) !important;
+    transform-origin: center;
+    transition: opacity .28s ease, transform .32s ease;
+    pointer-events: none;
+  }
+
+  .app-phone-home {
+    width: min(50vw, 197px) !important;
+  }
+
+  .app-phone.is-active {
+    opacity: 1;
+    transform: translateX(-50%) translateX(0) scale(1) !important;
+    z-index: 3;
+  }
+
+  .app-mobile-pointer {
+    top: 694px;
+  }
+
+  .app-mobile-pointer-left {
+    left: max(20px, calc(50% - 168px));
+  }
+
+  .app-mobile-pointer-right {
+    right: max(20px, calc(50% - 168px));
+    left: auto;
+  }
+
+  .app-mobile-badge {
+    left: 50%;
+    top: 942px;
+    width: 220px;
+    height: 58px;
+    transform: translateX(-50%);
+  }
+
+  /* Support: center the complete mobile illustration/callout composition,
+     rather than cropping the character at 431–767px. */
+  .support-section {
+    position: relative;
+    height: 616px;
+    min-height: 616px;
+    padding: 0;
+    overflow: hidden;
+    background: #fff7eb;
+  }
+
+  .support-copy {
+    position: absolute;
+    left: 50%;
+    top: 34px;
+    width: min(345px, calc(100% - 48px));
+    margin: 0;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+
+  .support-copy h2 {
+    width: 100%;
+    margin-top: 18px;
+    font-size: 25px;
+    line-height: 1.2;
+  }
+
+  .support-copy > p:last-of-type {
+    width: min(329px, 100%);
+    margin: 24px auto 0;
+    font-size: 11px;
+    line-height: 1.35;
+  }
+
+  .support-contact {
+    position: absolute;
+    left: 50%;
+    top: 158px;
+    width: min(345px, calc(100vw - 48px));
+    height: 44px;
+    margin: 0;
+    transform: translateX(-50%);
+  }
+
+  .support-visual {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 393px;
+    height: 448px;
+    margin: 0;
+    transform: translateX(-50%);
+  }
+
+  .support-character-picture {
+    display: block;
+  }
+
+  .support-character {
+    left: 22px;
+    top: 268px;
+    width: 201px;
+    height: 180px;
+    transform: none;
+    object-fit: cover;
+    border-radius: 18px;
+  }
+
+  .support-bubble {
+    left: 191px;
+    top: 263px;
+    width: 170px;
+    height: 92px;
+    transform: none;
+  }
+
+  .support-info {
+    position: absolute;
+    left: calc(50% - 137.5px);
+    top: 459px;
+    width: 287px;
+    height: 132px;
+    margin: 0;
+    display: grid;
+    grid-template-rows: repeat(3, 34px);
+    gap: 10px;
+  }
+
+  .support-row {
+    min-height: 34px;
+    grid-template-columns: 34px 1fr;
+    gap: 25px;
+  }
+
+  .support-icon {
+    width: 34px;
+    height: 34px;
+    margin: 0;
+    display: grid;
+    place-items: center;
+  }
+
+  .support-icon img {
+    width: 17px;
+    height: 17px;
+    display: block;
+    margin: 0;
+  }
+
+  .support-row div {
+    padding-top: 4px;
+  }
+
+  .support-row h3,
+  .support-row p {
+    font-size: 10px;
+    line-height: normal;
+  }
+
+  /* CTA/footer: keep plants at the sides and under the copy. */
+  .cta-area {
+    height: 172px;
+    padding: 18px 0;
+  }
+
+  .cta-banner {
+    position: relative;
+    width: min(357px, calc(100% - 36px));
+    height: 136px;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #dbd9f0;
+    border-radius: 16px;
+    background: #f8f7ff;
+    display: block;
+  }
+
+  .cta-plant {
+    z-index: 0;
+    pointer-events: none;
+    opacity: .62;
+  }
+
+  .cta-plant-left {
+    position: absolute;
+    left: 30px;
+    top: 19px;
+    width: 60px;
+    height: 84px;
+  }
+
+  .cta-plant-right {
+    position: absolute;
+    right: 29px;
+    left: auto;
+    top: -8px;
+    width: 63px;
+    height: 151px;
+  }
+
+  .cta-copy {
+    position: relative;
+    z-index: 2;
+    width: 223px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .cta-copy h2 {
+    position: absolute;
+    left: 50%;
+    top: 24px;
+    width: 223px;
+    margin: 0;
+    transform: translateX(-50%);
+    font-size: 16px;
+    line-height: 1.2;
+  }
+
+  .cta-button {
+    z-index: 3;
+    left: 50%;
+    top: 77px;
+    width: 170px;
+    height: 40px;
+    transform: translateX(-50%);
+  }
+
+  .site-footer {
+    position: relative;
+    height: 105px;
+    min-height: 105px;
+    padding: 0;
+  }
+
+  .footer-top {
+    position: relative;
+    width: min(393px, 100%);
+    height: 73px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .footer-brand {
+    left: 20px;
+    top: 2px;
+    width: 96px;
+    height: 40px;
+  }
+
+  .footer-brand img {
+    width: 96px;
+    height: 40px;
+    object-fit: contain;
+  }
+
+  .footer-nav {
+    left: 20px;
+    top: 46px;
+    width: calc(100% - 40px);
+    margin: 0;
+    justify-content: center;
+    gap: 0;
+    white-space: nowrap;
+  }
+
+  .footer-divider {
+    left: 20px;
+    top: 72px;
+    width: calc(100% - 40px);
+  }
+
+  .footer-legal-mobile {
+    left: 20px;
+    top: 82px;
+    width: calc(100% - 40px);
+  }
+}
