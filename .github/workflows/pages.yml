@@ -1,9 +1,10 @@
-name: Deploy develop to GitHub Pages
+name: Deploy landing page to GitHub Pages
 
 on:
   push:
     branches:
       - develop
+      - main
   workflow_dispatch:
 
 permissions:
