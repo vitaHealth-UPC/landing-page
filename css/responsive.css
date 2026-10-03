@@ -3135,3 +3135,27 @@
     font-size: 9.5px;
   }
 }
+
+
+/* Final hero alignment against Figma desktop coordinates */
+@media (min-width: 981px) {
+  .hero-handwritten {
+    left: 499px;
+    top: 11px;
+  }
+
+  .hero-arrow-heart {
+    left: 637px;
+    top: 73px;
+  }
+
+  html[lang="en"] .family-card > strong {
+    font-size: 12px;
+    line-height: 17px;
+  }
+
+  html[lang="en"] .family-member p {
+    font-size: 9.1px;
+    line-height: 12px;
+  }
+}
