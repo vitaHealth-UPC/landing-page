@@ -3128,3 +3128,10 @@
     top: 958px;
   }
 }
+
+
+@media (max-width: 430px) {
+  html[lang="en"] .family-card > strong {
+    font-size: 9.5px;
+  }
+}
