@@ -340,7 +340,7 @@ const DEFAULT_LOCALE = "en_US";
 const STORAGE_KEY = "tata-locale";
 
 function isMobileLayout() {
-  return window.matchMedia("(max-width: 430px)").matches;
+  return window.matchMedia("(max-width: 767px)").matches;
 }
 
 function updateLocalizedEmail(locale) {
@@ -424,7 +424,7 @@ document.addEventListener("DOMContentLoaded", () => {
     applyLocale(current === "en_US" ? "es_419" : "en_US");
   });
 
-  const mobileQuery = window.matchMedia("(max-width: 430px)");
+  const mobileQuery = window.matchMedia("(max-width: 767px)");
   mobileQuery.addEventListener?.("change", () => {
     const current = localStorage.getItem(STORAGE_KEY) || DEFAULT_LOCALE;
     applyLocale(current);
