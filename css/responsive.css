@@ -3810,9 +3810,10 @@
 
 /* Final minor polish — hero family status card */
 .family-card {
-  width: 158px;
-  height: 126px;
-  padding: 14px 16px 8px;
+  width: 168px;
+  height: auto;
+  min-height: 0;
+  padding: 15px 17px 6px;
 }
 
 .family-card > strong,
@@ -3832,14 +3833,15 @@ html[lang="en"] .family-card > strong {
 .family-member {
   grid-template-columns: 26px max-content;
   gap: 9px;
-  margin-top: 7px;
+  margin-top: 9px;
 }
 
 .family-member + .family-member {
-  margin-top: 3px;
+  margin-top: 7px;
 }
 
-.family-member p {
+.family-member p,
+.family-member p > * {
   white-space: nowrap;
 }
 
