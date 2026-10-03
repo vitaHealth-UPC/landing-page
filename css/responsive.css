@@ -4959,13 +4959,69 @@
 }
 
 @media (max-width: 767px) {
+  .family-card {
+    width: 143px;
+    height: 68px;
+    min-height: 68px;
+    padding: 10px 14px;
+    overflow: hidden;
+  }
+
+  .family-card > strong,
+  html[lang="en"] .family-card > strong {
+    width: 152px;
+    max-width: none;
+    font-size: 10px;
+    line-height: 12px;
+    white-space: nowrap;
+  }
+
+  .family-card .family-avatar,
   .family-card .family-avatar img {
+    display: none;
+  }
+
+  .family-member {
     display: block;
-    width: 12px;
-    height: 12px;
-    margin: auto;
-    object-fit: contain;
-    border-radius: 0;
-    opacity: 1;
+    margin: 8px 0 0;
+  }
+
+  .family-member + .family-member {
+    margin-top: 1px;
+  }
+
+  .family-member p,
+  html[lang="en"] .family-member p {
+    width: 115px;
+    min-width: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3px;
+    color: #44506f;
+    font-size: 9px;
+    line-height: 10px;
+    white-space: nowrap;
+  }
+
+  .family-member p::before {
+    content: "●";
+    flex: 0 0 auto;
+    color: #44506f;
+    font-size: 6px;
+    line-height: 1;
+  }
+
+  .family-member b {
+    font-weight: 400;
+  }
+
+  .family-member em {
+    color: #69b85f;
+    font-weight: 600;
+  }
+
+  .family-member p > span {
+    display: none;
   }
 }
