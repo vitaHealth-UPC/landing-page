@@ -2613,3 +2613,41 @@ body {
 .cta-copy > p:last-child {
   margin-top: 2px;
 }
+
+
+/* Hero and branding fidelity pass */
+.medication-symbol {
+  background: #f0ebff;
+}
+
+.confirmed-card > img {
+  width: 29px;
+  height: 29px;
+  object-fit: contain;
+}
+
+.family-avatar img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+@media (min-width: 981px) {
+  html[lang="en"] .family-card {
+    width: 133px;
+    height: 142px;
+  }
+
+  html[lang="en"] .family-card > strong {
+    width: 170px;
+    font-size: 12px;
+    line-height: 17px;
+    white-space: nowrap;
+  }
+
+  html[lang="en"] .family-member p {
+    font-size: 9.1px;
+    line-height: 12px;
+  }
+}
