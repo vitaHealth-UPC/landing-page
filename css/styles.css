@@ -230,8 +230,6 @@ blockquote {
   outline-offset: 3px;
 }
 
-
-/* Figma 405:4 — Header + Hero */
 :root {
   --tata-navy: #12275f;
   --tata-blue: #1b3a75;
@@ -701,8 +699,6 @@ body {
   object-fit: contain;
 }
 
-
-/* Figma 405:52 — Value strip */
 .value-strip {
   height: 124px;
   background: #fff7eb;
@@ -770,7 +766,6 @@ body {
   background: #e0e3ec;
 }
 
-/* Figma 405:80 — Features */
 .features-section {
   position: relative;
   min-height: 584px;
@@ -877,7 +872,6 @@ body {
   line-height: 22px;
 }
 
-/* Reminder card */
 .reminder-mini-ui {
   position: absolute;
   left: 31px;
@@ -956,7 +950,6 @@ body {
   line-height: 16px;
 }
 
-/* Family card */
 .family-feature .feature-card-copy p {
   max-width: 292px;
 }
@@ -1029,7 +1022,6 @@ body {
   height: 16px;
 }
 
-/* Insight card */
 .insight-feature .feature-card-copy {
   right: 18px;
 }
@@ -1134,8 +1126,6 @@ body {
   object-fit: contain;
 }
 
-
-/* Figma 532:2 — App showcase */
 .app-showcase {
   position: relative;
   height: 650px;
@@ -1278,7 +1268,6 @@ body {
   height: 393px;
 }
 
-/* Figma 405:107 — How it works */
 .how-section {
   min-height: 356px;
   padding: 51px 110px 66px;
@@ -1412,8 +1401,6 @@ body {
 .step-chevron-one { left: 377px; }
 .step-chevron-two { left: 809px; }
 
-
-/* Figma 405:133 — Testimonial */
 .testimonial-section {
   position: relative;
   height: 420px;
@@ -1592,7 +1579,6 @@ body {
   object-fit: contain;
 }
 
-/* Figma 532:293 — Quiénes somos */
 .about-section {
   min-height: 591px;
   padding: 55px 120px 55px;
@@ -1723,8 +1709,6 @@ body {
   text-align: center;
 }
 
-
-/* Figma 405:144 — Pricing */
 .pricing-section {
   position: relative;
   min-height: 580px;
@@ -2010,7 +1994,6 @@ body {
   font-weight: 600;
 }
 
-/* Figma 405:180 — Support */
 .support-section {
   position: relative;
   height: 364px;
@@ -2204,8 +2187,6 @@ body {
   text-decoration: none;
 }
 
-
-/* Locale/mobile fidelity helpers */
 .mobile-menu-button,
 .app-benefits-mobile,
 .app-cta-mobile,
@@ -2221,7 +2202,6 @@ body {
   display: contents;
 }
 
-/* Figma 667:1145 — CTA */
 .cta-area {
   height: 190px;
   padding: 34px 100px 20px;
@@ -2307,7 +2287,6 @@ body {
   font-weight: 600;
 }
 
-/* Figma 667:1155 — Footer */
 .site-footer {
   min-height: 150px;
   padding: 20px 100px;
@@ -2429,10 +2408,6 @@ body {
   text-decoration: none;
 }
 
-
-/* Visual fidelity QA — 2026-10-02 */
-/* Keep the desktop geometry faithful to the 1440px Figma artboards while
-   letting wide screens grow without making the focal assets look undersized. */
 @media (min-width: 981px) {
   .hero-background {
     left: -18.26%;
@@ -2566,8 +2541,6 @@ body {
   }
 }
 
-
-/* Consolidated fidelity primitives — 2026-10-03 */
 html,
 body {
   max-width: 100%;
@@ -2600,19 +2573,22 @@ body {
   object-fit: contain;
 }
 
-/* Match the compact Figma family status card without shrinking translations. */
 .family-card {
-  width: 150px;
-  height: auto;
+  width: 133px;
+  height: 142px;
   min-height: 142px;
   box-sizing: border-box;
-  padding: 12px 13px 11px;
+  padding: 11px 13px 10px;
+}
+
+html[lang="en"] .family-card {
+  width: 150px;
 }
 
 .family-card > strong,
 html[lang="en"] .family-card > strong {
   display: block;
-  width: auto;
+  width: 170px;
   max-width: none;
   font-size: 12px;
   line-height: 17px;
@@ -2620,21 +2596,31 @@ html[lang="en"] .family-card > strong {
 }
 
 .family-member {
-  grid-template-columns: 26px minmax(0, 1fr);
+  display: grid;
+  grid-template-columns: 26px 67px;
   gap: 8px;
-  align-items: center;
-  margin-top: 8px;
+  align-items: start;
+  margin-top: 10px;
 }
 
 .family-member + .family-member {
-  margin-top: 5px;
+  margin-top: 13px;
 }
 
 .family-member p,
 html[lang="en"] .family-member p {
+  width: 67px;
   min-width: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  color: #2d3d67;
   font-size: 9.1px;
-  line-height: 12px;
+  line-height: 13px;
+}
+
+html[lang="en"] .family-member p {
+  width: 84px;
 }
 
 .family-member p > * {
@@ -2642,13 +2628,13 @@ html[lang="en"] .family-member p {
 }
 
 .family-avatar {
-  position: relative;
   width: 26px;
   height: 26px;
-  display: block;
-  flex: 0 0 26px;
+  display: grid;
+  place-items: center;
   overflow: hidden;
   border-radius: 50%;
+  transform: translateY(3px);
 }
 
 .family-avatar-maria {
@@ -2659,35 +2645,14 @@ html[lang="en"] .family-member p {
   background: #d8ece7;
 }
 
-/* The exported 16px avatar glyph had a visible white disc. Draw the
-   low-contrast Figma person glyph directly so both avatars stay crisp. */
 .family-avatar img {
-  display: none;
-}
-
-.family-avatar::before {
-  content: "";
-  position: absolute;
-  left: 9px;
-  top: 6px;
-  width: 6px;
-  height: 6px;
-  box-sizing: border-box;
-  border: 1.6px solid #747b7f;
-  border-radius: 50%;
-}
-
-.family-avatar::after {
-  content: "";
-  position: absolute;
-  left: 6px;
-  top: 13px;
-  width: 14px;
-  height: 8px;
-  box-sizing: border-box;
-  border: 1.6px solid #747b7f;
-  border-bottom: 0;
-  border-radius: 10px 10px 0 0;
+  display: block;
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  object-fit: contain;
+  border-radius: 0;
+  opacity: 1;
 }
 
 .pricing-family .pricing-plan-icon > span {
