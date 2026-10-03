@@ -2567,97 +2567,16 @@ body {
 }
 
 
-/* Final visual fidelity pass — 2026-10-02 */
-.family-avatar {
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  overflow: hidden;
-}
-.family-avatar-maria { background: #f4ddcb; }
-.family-avatar-carlos { background: #d8ece7; }
-.family-avatar img {
-  width: 16px;
-  height: 16px;
-  object-fit: contain;
-  opacity: .72;
-}
-.pricing-family .pricing-plan-icon > span {
-  left: 8px;
-  top: 8px;
-  display: grid;
-  place-items: center;
-}
-.pricing-family-icon {
-  display: block;
-  margin: 0 auto;
-}
-.reminder-warm-strip {
-  left: 30px;
-  top: 0;
-  width: 283px;
-  height: 128px;
-  object-fit: contain;
-  filter: none;
-  opacity: 1;
-}
-.cta-plant {
-  -webkit-mask-image: radial-gradient(ellipse at center, #000 64%, rgba(0,0,0,.9) 76%, transparent 100%);
-  mask-image: radial-gradient(ellipse at center, #000 64%, rgba(0,0,0,.9) 76%, transparent 100%);
-}
-.cta-copy h2 {
-  line-height: 1.2;
-}
-.cta-copy > p:last-child {
-  margin-top: 2px;
-}
-
-
-/* Hero and branding fidelity pass */
-.medication-symbol {
-  background: #f0ebff;
-}
-
-.confirmed-card > img {
-  width: 29px;
-  height: 29px;
-  object-fit: contain;
-}
-
-.family-avatar img {
-  width: 26px;
-  height: 26px;
-  object-fit: contain;
-  border-radius: 50%;
-}
-
-@media (min-width: 981px) {
-  html[lang="en"] .family-card {
-    width: 133px;
-    height: 142px;
-  }
-
-  html[lang="en"] .family-card > strong {
-    width: 170px;
-    font-size: 12px;
-    line-height: 17px;
-    white-space: nowrap;
-  }
-
-  html[lang="en"] .family-member p {
-    font-size: 9.1px;
-    line-height: 12px;
-  }
-}
-
-
-/* Consolidated final fidelity pass — 2026-10-03 */
+/* Consolidated fidelity primitives — 2026-10-03 */
 html,
 body {
   max-width: 100%;
   overflow-x: hidden;
+}
+
+.hero-primary,
+.hero-primary span {
+  white-space: nowrap;
 }
 
 .medication-symbol {
@@ -2673,8 +2592,135 @@ body {
 
 .confirmed-card > img {
   box-sizing: border-box;
+  width: 29px;
+  height: 29px;
+  padding: 6px;
   border-radius: 50%;
   background: #eaf6ee;
-  padding: 6px;
   object-fit: contain;
+}
+
+/* Match the compact Figma family status card without shrinking translations. */
+.family-card {
+  width: 150px;
+  height: auto;
+  min-height: 142px;
+  box-sizing: border-box;
+  padding: 12px 13px 11px;
+}
+
+.family-card > strong,
+html[lang="en"] .family-card > strong {
+  display: block;
+  width: auto;
+  max-width: none;
+  font-size: 12px;
+  line-height: 17px;
+  white-space: nowrap;
+}
+
+.family-member {
+  grid-template-columns: 26px minmax(0, 1fr);
+  gap: 8px;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.family-member + .family-member {
+  margin-top: 5px;
+}
+
+.family-member p,
+html[lang="en"] .family-member p {
+  min-width: 0;
+  font-size: 9.1px;
+  line-height: 12px;
+}
+
+.family-member p > * {
+  white-space: nowrap;
+}
+
+.family-avatar {
+  position: relative;
+  width: 26px;
+  height: 26px;
+  display: block;
+  flex: 0 0 26px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.family-avatar-maria {
+  background: #f4ddcb;
+}
+
+.family-avatar-carlos {
+  background: #d8ece7;
+}
+
+/* The exported 16px avatar glyph had a visible white disc. Draw the
+   low-contrast Figma person glyph directly so both avatars stay crisp. */
+.family-avatar img {
+  display: none;
+}
+
+.family-avatar::before {
+  content: "";
+  position: absolute;
+  left: 9px;
+  top: 6px;
+  width: 6px;
+  height: 6px;
+  box-sizing: border-box;
+  border: 1.6px solid #747b7f;
+  border-radius: 50%;
+}
+
+.family-avatar::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 13px;
+  width: 14px;
+  height: 8px;
+  box-sizing: border-box;
+  border: 1.6px solid #747b7f;
+  border-bottom: 0;
+  border-radius: 10px 10px 0 0;
+}
+
+.pricing-family .pricing-plan-icon > span {
+  left: 8px;
+  top: 8px;
+  display: grid;
+  place-items: center;
+}
+
+.pricing-family-icon {
+  display: block;
+  margin: 0 auto;
+}
+
+.reminder-warm-strip {
+  left: 30px;
+  top: 0;
+  width: 283px;
+  height: 128px;
+  object-fit: contain;
+  filter: none;
+  opacity: 1;
+}
+
+.cta-plant {
+  -webkit-mask-image: radial-gradient(ellipse at center, #000 64%, rgba(0, 0, 0, .9) 76%, transparent 100%);
+  mask-image: radial-gradient(ellipse at center, #000 64%, rgba(0, 0, 0, .9) 76%, transparent 100%);
+}
+
+.cta-copy h2 {
+  line-height: 1.2;
+}
+
+.cta-copy > p:last-child {
+  margin-top: 2px;
 }
