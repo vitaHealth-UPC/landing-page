@@ -3808,96 +3808,1010 @@
   }
 }
 
-/* Final minor polish — hero family status card */
-.family-card {
-  width: 168px;
-  height: auto;
-  min-height: 0;
-  padding: 15px 17px 6px;
+/* Final responsive stabilization — 2026-10-03
+   One authoritative pass for compact desktop, tablet and mobile. */
+
+/* Compact desktop: keep the desktop language/assets, but stop fixed Figma
+   coordinates from overflowing when the viewport is narrower than 1280px. */
+@media (min-width: 1100px) and (max-width: 1279px) {
+  .header-shell {
+    width: calc(100% - 48px);
+  }
+
+  .main-nav {
+    margin-left: 44px;
+    gap: 18px;
+  }
+
+  .main-nav a {
+    font-size: 13px;
+  }
+
+  .header-actions {
+    gap: 12px;
+  }
+
+  .hero-copy {
+    left: 48px;
+    width: 450px;
+  }
+
+  .hero h1 {
+    width: 450px;
+    font-size: clamp(46px, 4.8vw, 56px);
+  }
+
+  .hero-description {
+    width: 430px;
+  }
+
+  .hero-primary {
+    width: 178px;
+  }
+
+  .hero-secondary {
+    width: 196px;
+  }
+
+  .hero-visual {
+    left: 47%;
+    transform: scale(.88);
+    transform-origin: top left;
+  }
+
+  .feature-cards {
+    width: min(900px, 100%);
+    grid-template-columns: repeat(2, minmax(0, 420px));
+    gap: 22px;
+  }
+
+  .insight-feature {
+    grid-column: 1 / -1;
+    width: min(420px, 100%);
+    justify-self: center;
+  }
+
+  .app-showcase-copy {
+    left: 48px;
+    width: 420px;
+  }
+
+  .app-showcase-phones {
+    width: 100%;
+    transform: none;
+  }
+
+  .app-phone-medications {
+    left: 52%;
+    top: 153px;
+    width: clamp(176px, 16.4vw, 205px);
+  }
+
+  .app-phone-home {
+    left: 66%;
+    top: 80px;
+    width: clamp(170px, 15.7vw, 193px);
+  }
+
+  .app-phone-family {
+    left: 80%;
+    top: 137px;
+    width: clamp(176px, 16.4vw, 205px);
+  }
+
+  .app-desktop-badge {
+    left: 65%;
+    top: 542px;
+    width: 205px;
+  }
+
+  .how-section {
+    padding: 52px 40px 60px;
+  }
+
+  .how-steps {
+    width: 100%;
+    height: auto;
+    margin-top: 18px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    transform: none;
+  }
+
+  .how-step,
+  .how-step:nth-of-type(1),
+  .how-step:nth-of-type(2),
+  .how-step:nth-of-type(3) {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 100%;
+    height: 118px;
+  }
+
+  .step-number {
+    left: 0;
+  }
+
+  .step-icon {
+    left: 42px;
+    width: 64px;
+    height: 64px;
+  }
+
+  .step-copy {
+    left: 118px;
+    width: calc(100% - 118px);
+  }
+
+  .step-chevron {
+    display: none;
+  }
+
+  .testimonial-section {
+    height: 420px;
+    min-height: 420px;
+    background: #f4f3fe;
+  }
+
+  .testimonial-family {
+    left: 0;
+    top: 0;
+    width: 44%;
+    height: 420px;
+    object-fit: cover;
+  }
+
+  .testimonial-quote {
+    left: 44%;
+    top: 0;
+    width: 56%;
+    height: 420px;
+    transform: none;
+  }
+
+  .testimonial-open-quote {
+    left: 30px;
+    top: 5px;
+    font-size: 82px;
+  }
+
+  .testimonial-quote > blockquote {
+    left: 48px;
+    top: 68px;
+    width: calc(100% - 82px);
+    font-size: 23px;
+  }
+
+  .testimonial-author {
+    left: 48px;
+    top: 190px;
+  }
+
+  .testimonial-role {
+    left: 48px;
+    top: 212px;
+  }
+
+  .testimonial-arrow {
+    left: 68px;
+    top: 268px;
+    width: 190px;
+  }
+
+  .testimonial-heart-large {
+    left: auto;
+    right: -6px;
+    top: 10px;
+    width: 215px;
+    height: 190px;
+  }
+
+  .testimonial-heart-small {
+    left: auto;
+    right: 155px;
+    top: 118px;
+    width: 118px;
+    height: 104px;
+  }
+
+  .testimonial-separator {
+    left: 63%;
+    top: 230px;
+    height: 105px;
+  }
+
+  .testimonial-secondary {
+    left: 67%;
+    top: 220px;
+    width: 30%;
+    height: 130px;
+  }
+
+  .testimonial-secondary > p {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .testimonial-secondary-person {
+    top: 76px;
+    gap: 10px;
+  }
+
+  .testimonial-secondary-person img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .testimonial-secondary-person strong {
+    width: calc(100% - 52px);
+    font-size: 11px;
+  }
+
+  .testimonial-marks {
+    right: 0;
+    left: auto;
+  }
+
+  .pricing-section {
+    min-height: 620px;
+  }
+
+  .pricing-intro {
+    left: 40px;
+    top: 88px;
+    width: 270px;
+  }
+
+  .pricing-intro h2,
+  .pricing-description {
+    width: 100%;
+  }
+
+  .pricing-intro h2 {
+    font-size: 32px;
+  }
+
+  .pricing-illustration {
+    left: -12px;
+    top: 205px;
+    transform: scale(.9);
+    transform-origin: top left;
+  }
+
+  .pricing-cards {
+    left: 340px;
+    top: 62px;
+    width: calc(100% - 380px);
+    height: 490px;
+    transform: none;
+  }
+
+  .pricing-essential {
+    left: 0;
+    width: calc(50% - 10px);
+    height: 420px;
+  }
+
+  .pricing-family {
+    left: calc(50% + 10px);
+    width: calc(50% - 10px);
+    height: 460px;
+  }
+
+  .pricing-summary {
+    width: calc(100% - 46px);
+  }
+
+  .pricing-family .pricing-summary {
+    width: calc(100% - 44px);
+  }
+
+  .pricing-list {
+    right: 20px;
+  }
+
+  .pricing-button {
+    width: calc(100% - 46px);
+  }
+
+  .pricing-family .pricing-button {
+    width: calc(100% - 44px);
+  }
+
+  .support-section {
+    height: auto;
+    min-height: 420px;
+    padding: 48px 40px;
+    display: grid;
+    grid-template-columns: minmax(320px, 1.15fr) minmax(260px, .9fr) minmax(250px, 1fr);
+    gap: 22px;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .support-copy,
+  .support-visual,
+  .support-info {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 100%;
+    margin: 0;
+    transform: none;
+  }
+
+  .support-copy h2,
+  .support-copy > p:last-of-type {
+    width: 100%;
+  }
+
+  .support-visual {
+    height: 300px;
+  }
+
+  .support-character {
+    left: 50%;
+    top: 14px;
+    width: 270px;
+    height: 270px;
+    transform: translateX(-50%);
+  }
+
+  .support-bubble {
+    left: auto;
+    right: -2px;
+    top: 34px;
+    width: 145px;
+  }
+
+  .support-divider {
+    display: none;
+  }
+
+  .support-info {
+    height: auto;
+    grid-template-rows: none;
+    gap: 8px;
+  }
+
+  .support-row {
+    min-height: 78px;
+    grid-template-columns: 40px minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .support-row p {
+    overflow-wrap: anywhere;
+  }
+
+  .cta-area {
+    height: auto;
+    padding: 28px 40px 20px;
+  }
+
+  .cta-banner {
+    width: 100%;
+    height: auto;
+    min-height: 136px;
+    padding: 18px 34px;
+    display: grid;
+    grid-template-columns: 92px minmax(0, 1fr) 188px 92px;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .cta-plant {
+    width: 92px;
+    height: 92px;
+  }
+
+  .cta-plant-right {
+    width: 96px;
+    height: 96px;
+  }
+
+  .cta-copy {
+    width: auto;
+    min-width: 0;
+  }
+
+  .cta-copy h2 {
+    font-size: 24px;
+  }
+
+  .cta-button {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 188px;
+    transform: none;
+  }
+
+  .site-footer {
+    min-height: 190px;
+    padding: 18px 40px;
+  }
+
+  .footer-top {
+    height: auto;
+    min-height: 108px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+  }
+
+  .footer-brand {
+    width: 110px;
+  }
+
+  .footer-brand img {
+    width: 110px;
+  }
+
+  .footer-tagline {
+    width: 180px;
+    font-size: 11px;
+  }
+
+  .footer-nav {
+    order: 3;
+    width: 100%;
+    margin: 0;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    white-space: normal;
+  }
+
+  .footer-nav a {
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  .footer-social-divider {
+    display: none;
+  }
+
+  .footer-socials {
+    margin-left: auto;
+  }
 }
 
-.family-card > strong,
-html[lang="en"] .family-card > strong {
-  width: max-content;
-  max-width: none;
-  white-space: nowrap;
+/* Tablet / small desktop: stop using desktop fixed coordinates altogether. */
+@media (min-width: 768px) and (max-width: 1099px) {
+  .site-header,
+  .header-shell {
+    height: 74px;
+  }
+
+  .header-shell {
+    width: calc(100% - 32px);
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .button-login {
+    display: none;
+  }
+
+  .header-actions {
+    gap: 10px;
+  }
+
+  .header-actions .button-start {
+    width: 110px;
+  }
+
+  .mobile-menu-button {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: 0;
+    border-radius: 20px;
+    background: #f0ebff;
+    color: #6c63d9;
+    font-family: "Inter", sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 38px;
+    cursor: pointer;
+  }
+
+  .main-nav.is-open {
+    position: absolute;
+    z-index: 50;
+    left: 20px;
+    right: 20px;
+    top: 74px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 0;
+    padding: 10px;
+    border: 1px solid #e5e5f0;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 10px 28px rgba(31, 41, 77, .14);
+    white-space: normal;
+  }
+
+  .main-nav.is-open a {
+    padding: 10px 12px;
+    border-radius: 10px;
+    font-size: 13px;
+  }
+
+  .hero {
+    height: auto;
+    min-height: 760px;
+    padding: 48px 32px 34px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-copy {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: min(100%, 560px);
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .hero h1,
+  .hero-description {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-actions {
+    width: auto;
+  }
+
+  .hero-primary {
+    width: 178px;
+  }
+
+  .hero-secondary {
+    width: 196px;
+  }
+
+  .hero-visual {
+    position: relative;
+    left: 50%;
+    top: auto;
+    width: 800px;
+    height: 405px;
+    margin-top: 12px;
+    transform: translateX(-50%) scale(.78);
+    transform-origin: top center;
+  }
+
+  .value-strip {
+    height: auto;
+    padding: 24px 0;
+  }
+
+  .value-strip-inner {
+    width: calc(100% - 48px);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 22px;
+  }
+
+  .value-divider {
+    display: none;
+  }
+
+  .features-section {
+    min-height: auto;
+    padding: 56px 28px 64px;
+  }
+
+  .feature-cards {
+    width: min(620px, 100%);
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .tata-feature-card,
+  .insight-feature {
+    width: 100%;
+    grid-column: auto;
+  }
+
+  .app-showcase {
+    height: auto;
+    min-height: 960px;
+    padding: 56px 28px 40px;
+  }
+
+  .app-showcase-copy {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: min(100%, 610px);
+    margin: 0 auto;
+  }
+
+  .app-showcase-copy h2,
+  .app-description {
+    width: 100%;
+  }
+
+  .app-showcase-phones {
+    position: relative;
+    width: min(100%, 720px);
+    height: 480px;
+    margin: 24px auto 0;
+    transform: none;
+  }
+
+  .app-phone-medications {
+    left: calc(50% - 245px);
+    top: 72px;
+    width: 205px;
+  }
+
+  .app-phone-home {
+    left: calc(50% - 96px);
+    top: 0;
+    width: 193px;
+  }
+
+  .app-phone-family {
+    left: calc(50% + 80px);
+    top: 72px;
+    width: 205px;
+  }
+
+  .app-desktop-badge {
+    left: 50%;
+    top: 430px;
+    width: 220px;
+    transform: translateX(-50%);
+  }
+
+  .how-section {
+    padding: 56px 28px 64px;
+  }
+
+  .how-steps {
+    width: min(100%, 620px);
+    height: auto;
+    margin-top: 30px;
+    display: grid;
+    gap: 18px;
+    transform: none;
+  }
+
+  .how-step,
+  .how-step:nth-of-type(1),
+  .how-step:nth-of-type(2),
+  .how-step:nth-of-type(3) {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 100%;
+    min-height: 118px;
+  }
+
+  .step-chevron {
+    display: none;
+  }
+
+  .testimonial-section {
+    height: auto;
+    min-height: 700px;
+    padding-bottom: 44px;
+    background: #f4f3fe;
+  }
+
+  .testimonial-family {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: min(100%, 620px);
+    height: 350px;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+  }
+
+  .testimonial-quote {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: min(100% - 44px, 720px);
+    min-height: 310px;
+    height: auto;
+    margin: 0 auto;
+    transform: none;
+  }
+
+  .about-section {
+    padding: 55px 28px 60px;
+  }
+
+  .about-video-grid {
+    grid-template-columns: 1fr;
+    max-width: 570px;
+  }
+
+  .pricing-section {
+    min-height: 1110px;
+    padding: 54px 28px 64px;
+  }
+
+  .pricing-intro {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: min(100%, 600px);
+    min-height: 245px;
+    margin: 0 auto;
+  }
+
+  .pricing-intro h2,
+  .pricing-description {
+    width: 100%;
+  }
+
+  .pricing-illustration {
+    left: 50%;
+    top: 86px;
+    margin: 0;
+    transform: translateX(-50%) scale(.78);
+    transform-origin: top center;
+  }
+
+  .pricing-cards {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: min(100%, 620px);
+    height: 820px;
+    margin: 18px auto 0;
+    transform: none;
+  }
+
+  .pricing-essential,
+  .pricing-family {
+    left: 50%;
+    width: min(100%, 390px);
+    transform: translateX(-50%);
+  }
+
+  .pricing-essential {
+    top: 0;
+  }
+
+  .pricing-family {
+    top: 440px;
+  }
+
+  .support-section {
+    height: auto;
+    min-height: 760px;
+    padding: 52px 28px 56px;
+  }
+
+  .support-copy {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: min(100%, 600px);
+    margin: 0 auto;
+  }
+
+  .support-copy h2,
+  .support-copy > p:last-of-type {
+    width: 100%;
+  }
+
+  .support-visual {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: min(100%, 520px);
+    height: 300px;
+    margin: 18px auto 0;
+    transform: none;
+  }
+
+  .support-character {
+    left: 50%;
+    width: 280px;
+    height: 280px;
+    transform: translateX(-50%);
+  }
+
+  .support-bubble {
+    left: 50%;
+    top: 30px;
+    margin-left: 100px;
+  }
+
+  .support-divider {
+    display: none;
+  }
+
+  .support-info {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: min(100%, 600px);
+    height: auto;
+    margin: 10px auto 0;
+    grid-template-rows: none;
+    gap: 8px;
+  }
+
+  .support-row {
+    min-height: 70px;
+  }
+
+  .cta-area {
+    height: auto;
+    padding: 26px 28px 18px;
+  }
+
+  .cta-banner {
+    width: 100%;
+    height: auto;
+    min-height: 150px;
+    padding: 20px 28px;
+    display: grid;
+    grid-template-columns: 74px minmax(0, 1fr) 178px 74px;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .cta-plant {
+    width: 74px;
+    height: 92px;
+  }
+
+  .cta-plant-right {
+    width: 78px;
+    height: 98px;
+  }
+
+  .cta-copy {
+    width: auto;
+    min-width: 0;
+  }
+
+  .cta-copy h2 {
+    font-size: 22px;
+  }
+
+  .cta-button {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 178px;
+    transform: none;
+  }
+
+  .site-footer {
+    min-height: 220px;
+    padding: 18px 28px;
+  }
+
+  .footer-top {
+    height: auto;
+    min-height: 132px;
+    display: grid;
+    grid-template-columns: 120px 1fr auto;
+    gap: 12px 18px;
+    align-items: center;
+  }
+
+  .footer-brand,
+  .footer-brand img {
+    width: 110px;
+  }
+
+  .footer-tagline {
+    width: auto;
+    max-width: 220px;
+    font-size: 11px;
+  }
+
+  .footer-nav {
+    grid-column: 1 / -1;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 22px;
+    white-space: normal;
+  }
+
+  .footer-nav a {
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  .footer-social-divider {
+    display: none;
+  }
+
+  .footer-socials {
+    justify-self: end;
+  }
 }
 
-.family-card .family-avatar img {
-  width: 16px;
-  height: 16px;
-  object-fit: contain;
-  border-radius: 0;
-}
-
-.family-member {
-  grid-template-columns: 26px max-content;
-  gap: 9px;
-  margin-top: 9px;
-}
-
-.family-member + .family-member {
-  margin-top: 7px;
-}
-
-.family-member p,
-.family-member p > * {
-  white-space: nowrap;
-}
-
+/* Mobile artboards remain Figma-authored, but the family status card and CTA
+   must grow with translated content instead of clipping it. */
 @media (max-width: 767px) {
   .family-card {
-    width: 170px;
-    height: 70px;
-    padding: 11px 15px 7px;
-    overflow: hidden;
+    width: 154px;
+    height: 76px;
+    min-height: 76px;
+    padding: 9px 11px 8px;
+    overflow: visible;
   }
 
   .family-card > strong,
   html[lang="en"] .family-card > strong {
     width: auto;
-    max-width: none;
     font-size: 10px;
     line-height: 12px;
     white-space: nowrap;
   }
 
   .family-card .family-avatar {
-    display: grid;
-    width: 20px;
-    height: 20px;
-    flex: 0 0 20px;
+    display: block;
+    width: 18px;
+    height: 18px;
+    flex: 0 0 18px;
   }
 
-  .family-card .family-avatar img {
-    display: block;
-    width: 12px;
-    height: 12px;
-    object-fit: contain;
-    border-radius: 0;
+  .family-avatar::before {
+    left: 6px;
+    top: 4px;
+    width: 5px;
+    height: 5px;
+    border-width: 1.3px;
+  }
+
+  .family-avatar::after {
+    left: 4px;
+    top: 9px;
+    width: 10px;
+    height: 6px;
+    border-width: 1.3px;
   }
 
   .family-member {
     display: grid;
-    grid-template-columns: 20px max-content;
-    gap: 6px;
-    align-items: center;
-    margin-top: 6px;
+    grid-template-columns: 18px minmax(0, 1fr);
+    gap: 5px;
+    margin-top: 5px;
   }
 
   .family-member + .family-member {
-    margin-top: 3px;
+    margin-top: 2px;
   }
 
-  .family-member p {
+  .family-member p,
+  html[lang="en"] .family-member p {
     width: auto;
-    min-width: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 3px;
-    font-size: 9px;
-    line-height: 10px;
+    font-size: 8.6px;
+    line-height: 9px;
     white-space: nowrap;
   }
 
@@ -3907,5 +4821,63 @@ html[lang="en"] .family-card > strong {
 
   .family-member p > span {
     display: none;
+  }
+
+  .cta-area {
+    height: auto;
+    padding: 18px 0;
+  }
+
+  .cta-banner {
+    width: min(357px, calc(100% - 36px));
+    height: auto;
+    min-height: 148px;
+    padding: 18px 66px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .cta-copy {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+
+  .cta-kicker,
+  .cta-copy > p:last-child {
+    display: none;
+  }
+
+  .cta-copy h2 {
+    position: static;
+    width: 100%;
+    margin: 0;
+    transform: none;
+    font-size: 16px;
+    line-height: 1.2;
+  }
+
+  .cta-button {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 170px;
+    height: 40px;
+    margin: 0 auto;
+    transform: none;
+  }
+
+  .cta-plant-left {
+    left: 24px;
+    top: 25px;
+  }
+
+  .cta-plant-right {
+    right: 23px;
+    top: -2px;
   }
 }
