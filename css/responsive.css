@@ -3808,47 +3808,83 @@
   }
 }
 
-/* Minor fixes — hero family status card */
+/* Final minor polish — hero family status card */
+.family-card {
+  width: 158px;
+  height: 126px;
+  padding: 14px 16px 8px;
+}
+
+.family-card > strong,
+html[lang="en"] .family-card > strong {
+  width: max-content;
+  max-width: none;
+  white-space: nowrap;
+}
+
+.family-card .family-avatar img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  border-radius: 0;
+}
+
+.family-member {
+  grid-template-columns: 26px max-content;
+  gap: 9px;
+  margin-top: 7px;
+}
+
+.family-member + .family-member {
+  margin-top: 3px;
+}
+
+.family-member p {
+  white-space: nowrap;
+}
+
 @media (max-width: 767px) {
   .family-card {
-    width: 160px;
-    height: 76px;
-    padding: 9px 12px 7px;
+    width: 170px;
+    height: 70px;
+    padding: 11px 15px 7px;
     overflow: hidden;
   }
 
   .family-card > strong,
   html[lang="en"] .family-card > strong {
-    width: 136px;
+    width: auto;
+    max-width: none;
     font-size: 10px;
     line-height: 12px;
+    white-space: nowrap;
   }
 
   .family-card .family-avatar {
     display: grid;
-    width: 18px;
-    height: 18px;
-    flex: 0 0 18px;
+    width: 20px;
+    height: 20px;
+    flex: 0 0 20px;
   }
 
   .family-card .family-avatar img {
     display: block;
-    width: 18px;
-    height: 18px;
+    width: 12px;
+    height: 12px;
     object-fit: contain;
-    border-radius: 50%;
+    border-radius: 0;
   }
 
   .family-member {
     display: grid;
-    grid-template-columns: 18px minmax(0, 1fr);
-    gap: 5px;
+    grid-template-columns: 20px max-content;
+    gap: 6px;
     align-items: center;
-    margin-top: 5px;
+    margin-top: 6px;
   }
 
   .family-member + .family-member {
-    margin-top: 2px;
+    margin-top: 3px;
   }
 
   .family-member p {
